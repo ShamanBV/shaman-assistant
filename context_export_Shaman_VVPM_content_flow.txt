@@ -1,0 +1,1479 @@
+# Knowledge Base Context Export
+# Topic: Shaman VVPM content flow
+# Results: 40 chunks
+# Generated: 2026-01-07 15:15
+================================================================================
+
+Use this context to help write documentation or answer questions about this topic.
+
+================================================================================
+
+--- CHUNK 1 (source: confluence, relevance: 0.78) ---
+Title: MLR Documents | Emails (part 1)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1139048489
+
+# MLR Documents | Emails
+
+Path: Admin Space > Approved Email Builder
+
+Overview
+MLR reviews are a key practice in pharmaceutical marketing, ensuring that marketing and promotional materials comply with regulatory standards. The MLR process usually begins after the client approves the marketing creative work. A team of legal, medical, and regulatory experts carefully reviews each marketing component, assessing the accuracy of medical information, adherence to legal requirements, and compliance with ethical marketing practices.
+Although the MLR process may vary slightly among pharmaceutical companies, the primary goal remains the same.
+Key Functions
+: In Shaman, you can create an MLR document either by exporting the current design directly to the vault from ShamanGo or by uploading a PDF. Additionally, you can retrieve MLR documents from PromoMats and attach them to the email during the Export step.
+Commercial
+Paid feature
+: YES
+:heavy_dollar_sign:
+1f4b2
+💲
+#EAE6FF
+The MLR feature for Email is part of the Email Plus Package
+How to enable
+Feature
+IsActive
+MlrCreationForEmailDocument
+YES
+MlrDocuments
+YES
+The
+MlrDocuments
+feature was previously limited to linking Emails or Presentations to existing MLR Documents within the VVPM.
+
+--- CHUNK 2 (source: pdf, relevance: 0.77) ---
+Title: Untitled
+
+# Shaman & Veeva Vault Integration Guide v4.pdf
+
+Shaman & Veeva Vault
+Integration Guide
+A practical guide for Veeva Vault teams supporting the Shaman Content
+Authoring <> Veeva Vault PromoMats (VVPM) integration.
+Version: 4 Last update: Jul 16, 2025
+Page 1/22
+
+Contents
+Shaman & Veeva Vault Integration Guide 1
+1. Why Shaman Content Authoring 3
+1.1 Introduction and the Shaman Approach 3
+1.2 Content Authoring Solution in the Content Value Chain 4
+1.3 Veeva Silver Product Partner 4
+2. Shaman and Veeva Vault PromoMats 5
+2.1 Authoring in Shaman, Managing in Vault 5
+2.2 Content Review and Approval 5
+2.3 Content Publishing 6
+2.4 Document Lifecycle Tracking and Permissions 6
+3. End-to-End Content workflow 7
+3.1 Your SOP/ End user Guide for Veeva Vault PromoMats 7
+4. Points of integration 8
+4.1 Create and Update Documents in Vault 9
+4.2 Create/Update Multichannel Content 9
+4.3 Component Retrieval and Linking 10
+4.4 Document Access 10
+4.5 Object Access 10
+4.6 Lifecycle Sync 11
+5. Method of Integration 11
+5.1 Integration User Setup 11
+5.2 Minimum Permission Requirements 12
+6. Document access 12
+Document Access 12
+Document Create and Update 13
+6.1 Document Sharing Settings 13
+6.2 Example Permissions Matrix for Shaman Integration User 13
+7. Configuring the Shaman accounts 15
+7.1 Required Document Fields Mapping 15
+7.2 Dynamic Object Integration 15
+7.3 Naming Convention Support 15
+7.4 Ongoing Admin Support 16
+8. Veeva Tokens 16
+9. Navigating Between VVPM and Shaman 17
+9.1 Configure the VVPM webaction “Open in Shaman” 17
+10 Appendix 18
+10.1 Lifecycle: Material/Promotional (Sample) 18
+10.2 Configuration Examples for Shaman Integration User by feature set 19
+Page 2/22
+
+--- CHUNK 3 (source: pdf, relevance: 0.77) ---
+Title: Untitled
+
+# Shaman & Veeva Vault Integration Guide v4.pdf (part 4)
+
+r, which means our integration is
+built on validated API connections, follows Veeva development best practices, and is
+supported by up-to-date product documentation and production customer references.
+Page 4/22
+
+As a Silver partner, our platform and integration workflows have been reviewed and
+recognized by Veeva, ensuring a reliable and compliant connection between Shaman
+and Veeva Vault PromoMats.
+2. Shaman and Veeva Vault PromoMats
+Together, Shaman and Veeva Vault PromoMats (VVPM) enable a compliant, scalable,
+and fully integrated content production model. While Shaman provides an intuitive,
+self-service authoring experience, Veeva Vault remains the single source of truth for all
+commercial and medical content.
+2.1 Authoring in Shaman, Managing in Vault
+Shaman allows users to build composite assets from approved templates and
+components—including those originating (stored) from PromoMats. Once a content
+piece in Shaman is ready for review, users can seamlessly sync it into VVPM for
+regulatory review.
+This integration allows content teams to:
+● Author faster and more autonomously
+● Ensure that content entering VVPM is structured, complete, and traceable
+● Maintain full control over compliance workflows through Vault
+● No changes required to your MLR process and SOPs
+2.2 Content Review and Approval
+Once content is created in Veeva Vault as material, content owners can initiate and
+manage the Medical, Legal, and Regulatory (MLR) review process in VVPM as usual.
+Page 5/22
+
+--- CHUNK 4 (source: pdf, relevance: 0.75) ---
+Title: Untitled
+
+# Shaman & Veeva Vault Integration Guide v4.pdf (part 6)
+
+that content remains consistent across systems, aligns
+with your SOPs, and respects Vault governance protocols — while unlocking a more
+efficient and user-friendly content creation process.
+Page 6/22
+
+3. End-to-End Content workflow
+To implement the Shaman–Veeva Vault integration, we begin with your existing SOPs
+and content workflows as the foundation. Our goal is to extend, not replace, your
+current processes — incorporating Shaman’s authoring capabilities in a way that aligns
+with your governance and approval model.
+Your current content workflow probably includes an external agency or internal
+production team acting as content creator. Shaman can be introduced at this step,
+replacing or augmenting that role with self-service content authoring.
+While we follow your current workflow, Shaman often creates opportunities for
+optimization — for example:
+● Removing steps to manual upload content in Veeva Vault
+● Removing the content html production step
+● Approved content is pixel-perfect to html
+● Auto review content
+Throughout implementation, our team will proactively identify potential improvements,
+such as reducing unnecessary steps or automating metadata handling. However, any
+workflow changes are entirely up to your discretion and subject to your SOP
+governance. Our guiding principle: respect your compliance model, enhance your
+operational efficiency.
+3.1 Your SOP/ End user Guide for Veeva Vault PromoMats
+To ensure optimal configuration, we’d like to understand your current content production
+process. This includes:
+● Document types, subtypes, lifecycles and workflows
+● Roles and responsibilities of users involved in content authoring, review, and
+approval
+● Lifecycle states and workflow steps used in VVPM to progress content
+Page 7/22
+
+--- CHUNK 5 (source: pdf, relevance: 0.74) ---
+Title: Untitled
+
+# Shaman __ VVPM workflow (Co-owner) - Arcade.pdf - Page 15
+
+24. The Veeva Vault PromoMats status is directly visible in Shaman. We see that the MLR
+status is now Approved for Distribution.
+The Veeva Vault PromoMats status is directly visible in Shaman. We see that the MLR status
+is now Approved for Distribution.
+View online Made with Arcade
+
+[Visual Context: This page shows the final verification step in the Shaman interface, demonstrating how Veeva Vault PromoMats status updates are automatically reflected in the system.
+
+## Visual Elements:
+- **Main Interface**: The Shaman application interface with the "Demo VVPM workflow" displayed
+- **Left Navigation Panel**: Contains menu items including General, Veeva Status, First Impression, Veeva Details, Content Tagging, Fragments, Documents, UTM Tracking, History, and Preview
+- **Central Content Area**: Shows the "Veeva Status" section with detailed status information
+- **Right Panel**: Contains promotional material about XANLINAX with an image
+
+## Hotspots/Highlights:
+- **Green circle highlight**: Points to the MLR status field showing "Approved for Distribution (1.0)"
+- The status information is prominently displayed in the central area
+
+## Screenshots:
+The screenshot shows the Shaman application in a state where:
+- The workflow name "Demo VVPM workflow" is visible at the top
+- The Veeva Status section is active and expanded
+- Key status fields are displayed including Source latest version, Latest approved version, Document number, and Veeva ID
+
+## Action Context:
+This is a verification step where users can **observe and confirm** that the MLR (Medical Legal Regulatory) status has been successfully updated to "Approved for Distribution." The user should look at the highlighted MLR status field to see the automatic synchronization between Veeva Vault PromoMats and Shaman has completed successfully.
+
+The step demonstrates the real-time integration capability, showing how status changes in Veeva Vault are immediately visible within the Shaman workflow interface without requiring manual updates.]
+
+--- CHUNK 6 (source: helpcenter, relevance: 0.73) ---
+Title: Create an MLR Document in Shaman for an approved email
+URL: https://help.shamancloud.com/en/articles/7941824-create-an-mlr-document-in-shaman-for-an-approved-email
+
+# Create an MLR Document in Shaman for an approved email
+
+In this article:
+What is MLR document creation in Shaman?
+How to create an MLR document in Shaman and sync your content to Veeva Vault?
+Link to an existing MLR document in Veeva Vault
+What is MLR document creation in Shaman?
+MLR document creation for approved email in Shaman is designed to further simplify the process of creating multi-channel content for Veeva Vault.
+An MLR document is a combination of a visual rendition of your email content, and the MLR proof you receive that approves the distribution of the email content you are creating for a specific amount of time and to a specific audience. Without an MLR document, it is not possible to approve content in Veeva Vault and make it available for your end users to users.
+We understand that not all of the Shaman users in your organization will have access to Veeva Vault, so we have enabled a tool in Shaman that allows all users to create an MLR document in Shaman and sync their email fragments or templates directly to Veeva Vault (based on the email and your configuration).
+The workflow outlined below means that Shaman users only need to contact their local Veeva Vault admin once in the process - to approve the MLR document for distribution and also approve the content (email fragments, email templates, or template fragments) in Veeva Vault.
+In this article we will take you through step by step how to create an MLR document, and then sync your content to Veeva Vault.
+How to create an MLR document in Shaman and sync your content to Veeva Vault?
+Once you have completed the
+Veeva settings
+,
+added copy
+,
+created a design
+and
+tested your email
+, click on the tab “MLR” from the Overview page of your email fragment or template.
+From here, you can export a PDF of your email fragment or email template to then send for review and approval in your FUSE or local approval system.
+Export PDF options
+Include responsive design (mobile view):
+Enabling this option will include a rendition of the mobile version of your email design in the same PDF export as the desktop version.
+Compare against previous PDF version:
+Compare text of email versions in PDF export: If you have edited the text in your email and saved the versions separately (you can learn more about email versions
+here
+) you also have the option to compare the current version of your email, with any previous different version side by side in a PDF.
+Include document information
+Good to know!
+If you are exporting an email template, you will see two additional options appear underneath the “PDF file” option: “Include selected email fragments” and “Include selected template fragment”.
+You can click these toggles to enable them to show either email fragments or the selected template fragments in the exported PDF file.
+Then, click the “Send to Email” button. You will receive the PDF file to your email address within a few minutes.
+Good to know!
+- A PDF file means you will receive a PDF of your email template or fragment.
+- PDF file including related fragments means you will receive the email template and the email fragments used.
+Top tip:
+Make sure to read our short article in which we explain in more detail what email fragments are and how they can be used.
+Here is where the process gets interesting.
+You will see two options available in the section "MLR document in Veeva Vault".
+Create new:
+select this option if you wish to create an MLR document in Shaman
+Link to existing:
+select this option if you wish to link to an MLR document manually uploaded and approved for distribution in Veeva Vault. Click here to view more information on how to link to an existing MLR document.
+Click "create new" to begin the process. You will then be redirected to a page where you can add all the details for your MLR document:
+Document Name*:
+This field is automatically populated from the name of the corresponding email content you are creating the MLR document for. You can edit the name by simply typing in this field. This is an obligatory field.
+Description
+: This field is automatically populated from the description of the corresponding email content you are creating the MLR document for. You can edit the name by simply typing in this field. This is an optional field.
+Product/Brand*
+: This is a dropdown menu, automatically populated with the product/brand assigned to your email template or fragment. This is an obligatory field.
+Country*
+: This is a dropdown menu, automatically populated with the country assigned to your email template or fragment. This is an obligatory field.
+MLR Approval Nr*
+: this is a free text field and will usually be a five or six-digit number that can be found on your approval document. This is an obligatory field.
+Material Intent*:
+Ordinarily there are two options to choose from here, promotional and non-promotional (but this may vary depending on your account settings). You can select the value that matches your approval document. This is an obligatory field.
+Audience*:
+Ordinarily there are multiple options available in a dropdown menu (eg. Physician, Nurse, etc). You can select the value that matches your approval document. This is an obligatory field.
+Language*
+:  This is a dropdown menu, automatically populated with the language assigned to your email template or fragment. This is an obligatory field.
+Expiry Date*:
+Using the calendar which opens when you click on this field, you can select the expiry date which matches your approval document. This is an obligatory field.
+Once you have completed these details, you need to attach the document exported from the FUSE/local approval system along with a viewable rendition of the content in PDF form.
+MLR document*
+is the viewable rendition of the content in PDF (which you can export directly from Shaman using the "Export as PDF" option.
+MLR Proof*
+is the PDF document or email from the FUSE/local approval system.
+You can then click the "Create" button in the top right-hand corner to create your MLR document:
+You will be directed to a page where you can view the progress of the creation of the MLR document:
+Once the MLR document has been created, you can see your MLR document now attached.
+You can now proceed to the "Export" tab to sync your email content to Veeva Vault.
+Take a look at
+this article
+for more information on exporting email content to Veeva Vault.
+Link to an existing MLR document in Veeva Vault
+To link an MLR document which has been manually uploaded and approved in Veeva Vault, from the "MLR" tab click the "Link to existing" option.
+Here you will be able to see all MLR documents which are currently available for use for the Product/brand assigned to the email content you are working with.
+Good to know!
+If you do not see an MLR document that has recently been uploaded and approved to Veeva Vault, click the "Update button" to retrieve the latest MLR documents.
+To select an MLR document from the list, click the small circle next to the corresponding document and then click the "Select" button in the top right corner.
+You will then see the MLR document attached to your email content.
+You can preview the details of the MLR document (such as creation date, Product/brand, etc) by clicking "Details".
+Alternatively, you can remove the MLR document by clicking the "Remove MLR document" button.
+
+--- CHUNK 7 (source: pdf, relevance: 0.71) ---
+Title: Untitled
+
+# Shaman __ VVPM workflow (Co-owner) - Arcade.pdf - Page 9
+
+13. This is the MLR document you just created. You can review it, add or change metadata
+and then start the review process.
+14. Send for Review
+View online Made with Arcade
+
+[Visual Context: Based on this tutorial page, here's what's shown:
+
+## Visual Elements:
+- **Interface**: Two screenshots of the Veeva PromoMats application showing an MLR (Medical Legal Regulatory) document workflow
+- **Document Content**: A marketing document featuring "Xanlimac - Your First Line of Defense" with promotional imagery and product information
+- **Navigation**: The interface shows workflow stages at the top: Pre-Approval, In Review and Approval, Proofing and Compliance, Submission to Health Authority, and Approved for Distribution
+- **Metadata Panel**: Right sidebar displaying document details including version, status, country, product information, and review timelines
+
+## Hotspots/Highlights:
+- **Green Circle**: In the second screenshot, there's a prominent green circle highlighting a dropdown menu in the upper right area of the interface, specifically pointing to workflow action options
+
+## Screenshots Context:
+The screenshots show the same MLR document in two states:
+1. **First screenshot**: Document in review mode where users can examine content and metadata
+2. **Second screenshot**: Shows the "Send for Review" action being initiated, with the highlighted dropdown menu containing options like "Send to Owner/Creator," "Copy Message," and "Assign to General"
+
+## Action Context:
+This step instructs users to:
+1. Review the created MLR document and its metadata (shown in right panel)
+2. Use the highlighted dropdown menu to initiate the review process by selecting "Send for Review" or related workflow actions
+
+The tutorial demonstrates how to transition from document creation/review phase to formally submitting the document into the approval workflow within the Veeva PromoMats system.]
+
+--- CHUNK 8 (source: slack, relevance: 0.71) ---
+Title: Untitled
+
+[2025-08-22] Liliana Ramos: Hi @Xavier Verbij happy Friday :partying_face:
+We have a new-to-Shaman user in Takeda NL who can't initiate the MLR workflow in PromoMats. I believe this is because they don't have the right permissions.
+If I got it right, once the MLR is in PromoMats, the user adds themselves as the owner and initiates the approval workflow, is this correct?
+  → Xavier Verbij: Liliana, they will have to reach out to the Veeva Support team and ask the following things.
+
+1. Add the "Shaman Co-Owner" role.
+2. Enable the ability to view jobs for both CLMS and VAEs.
+3. Add users to the group "Digital Specialist CMSO."
+4. Update their security profile to "Digital Specialist."
+
+--- CHUNK 9 (source: pdf, relevance: 0.71) ---
+Title: Untitled
+
+# Shaman __ VVPM workflow (Co-owner) - Arcade.pdf - Page 14
+
+22. Back in Veeva Vault, send to review again
+23. Great! The MLR document has been approved. Now we continue and generate the Email
+HTML. Log in to Shaman.
+View online Made with Arcade
+
+[Visual Context: Based on this PDF page from the Shaman VVPM workflow tutorial, here's what I can observe:
+
+## Visual Elements
+- **Two screenshots** of the Veeva Vault interface showing the PromoMats system
+- **Navigation workflow bar** at the top showing stages: Pre-Approval → In Review and Approval → Proofing and Compliance → Submission to Hlth Authority → Approved for Distribution
+- **Right-side information panel** displaying document metadata and details
+- **Central content area** showing a promotional material for "XANLINAX - Your First Line of Defense" with medical imagery
+
+## Hotspots/Highlights
+- **Green circular highlight** in the first screenshot pointing to what appears to be a "Send for Review" or similar action button in the right panel
+- The workflow progress bar shows different states between the two screenshots, indicating progression through the approval process
+
+## Screenshots Context
+The screenshots show the Veeva Vault PromoMats application in two different states:
+1. **First screenshot**: Document in review stage with the highlighted action button
+2. **Second screenshot**: Document has progressed to "Approved for Distribution" status
+
+## Action Context
+The user is instructed to:
+1. **Step 22**: Use the highlighted button in Veeva Vault to send the document back for review
+2. **Step 23**: After MLR approval is achieved, transition to logging into the Shaman system to generate Email HTML
+
+The visual progression shows the document moving through Veeva Vault's approval workflow before transitioning to the next system (Shaman) for email generation tasks.]
+
+--- CHUNK 10 (source: helpcenter, relevance: 0.70) ---
+Title: Syncing presentations from Shaman to Veeva Vault
+URL: https://help.shamancloud.com/en/articles/9117596-syncing-presentations-from-shaman-to-veeva-vault
+
+# Syncing presentations from Shaman to Veeva Vault
+
+In this article:
+How does the sync process from Shaman to Veeva Vault work?
+Syncing your presentation: from start to finish
+​
+How does the sync process from Shaman to Veeva Vault work?
+From Shaman you can sync presentations directly to Veeva Vault, using the easy to use export option found through the “Export” tab. After the sync from Shaman, the presentation content will be ready for you to test in Veeva Vault.
+Good to know!
+Each time that you make changes to a presentation in Shaman, you will need to export the presentation again using the “Synchronise” button in the “Export" tab for the updates to show in Veeva Vault and your test CRM environment. In this article we will show you how to complete the sync (it is so easy!)
+Syncing your presentation: from start to finish
+Let's review the overall workflow for the creation, approval and upload of a presentation.
+Good to know!
+Create a presentation. Export a PDF of the final presentation.
+Create a document in your local MLR approval system and upload the PDF of your presentation. Complete the review and approval process in your local MLR System.
+Good to know!
+It is now possible to create an MLR document for your CLM presentation in Shaman. Please contact your dedicated CSM to find out more.
+Create an MLR document of the approved content in your Veeva Vault; upload the approved PDF and add metadata like expiry date and or local MLR System approval number.
+Create a new presentation in Shaman. Upload the approved presentation in Shaman (accepted formats: PPT, PDF or a series of JPEGs or PNGs.
+Assemble the slides, add supporting files like PDF documents and video and add an interactive layer of links.
+In the Overview page of the presentation, complete the mandatory fields necessary for a successful sync to Veeva Vault.
+If you have Slide naming configured in your account, review and add slide naming information for every slide through the “Slide details” tab.
+If you have Shaman connect features enabled in your account, through the “Connect” tab, you can choose the Shaman connect settings for the presentation.
+In the “Test” tab, preview the interactions, structure and navigation of the presentation.
+In the “MLR” tab, select the MLR document you previously uploaded in Veeva Vault (link to existing), or if you have MLR creation for CLM enabled in your account, select “create new” to create a new MLR document.
+In this tab, you can also export your presentation as a PDF handout, or as an web link to straight to your inbox.
+Using the “Export” tab, click “Synchronise” to sync the CLM to Veeva Vault.
+In Veeva Vault, set the binder, slides and shared resource file to “Staged”. Then, push the content to CRM Full (Menu: CRM publish).
+You can now test the presentation in CRM Full using the relevant device (iOS, WinApp or Online).
+When you have tested and everything in the presentation is working correctly, you can go back to Veeva Vault and change the status of the binder, slides and shared resource file to 'Approved'.
+Publish the content to CRM Production (Menu: CRM publish)
+Good to know!
+If you take a look at the presentation in Shaman after following these steps, you will noticed that the fields relating to Veeva status and Veeva ID have been automatically populated.
+Below we highlight the steps in Shaman related to this Veeva Vault Sync.
+Create a new presentation in Shaman, check out
+this article
+if you need to review how to do this.
+In the Overview page of the presentation, complete the mandatory fields necessary for a successful sync to Veeva Vault. You can review the product/brand before completing the sync to determine which users in Veeva CRM will have access to this presentation, as well as other important information.
+Check out
+this article
+for more information on completing Veeva information for your presentation.
+In the "Assemble" section, upload slides, add supporting files like PDF documents and video and add
+an interactive layer of links.
+If you have Slide naming configured in your account, review and add slide naming information for every slide through the “Slide details” tab. In slide naming, you can also assign names and categories to your slides by selecting “Settings” and then “Slide Naming”. (Check out
+this article
+for more information on completing slide naming for your presentation.)
+If you have Shaman connect features enabled in your account, through the “Connect” tab, you can choose the Shaman connect settings for the presentation. Click
+this article
+to find out more.
+In the “Test” tab, preview the interactions, structure and navigation of the presentation.
+In the “MLR” tab, select the MLR document you previously uploaded in Veeva Vault (link to existing), or select “create new” to create a new MLR document.
+Good to know!
+MLR review is short for medical, legal, and regulatory affairs review. It's an essential process in healthcare marketing to make sure advertising and promotional content is accurate, compliant, and ready to be published.
+The MLR process is how life sciences companies ensure the compliance of their marketing and promotion materials with internal and external regulations and brand guidelines.
+When the MLR document of approved content is created in Veeva Vault, you can link it to your presentation in Shaman. Or alternatively, select “create new” to create a new MLR document.
+To make sure you have the most up to date list of MLRs, double check first that the correct country and product/brand are selected for your presentation in the Veeva information page. You can then click Refresh to update the MLR documents available in Veeva Vault.
+This list will fetch all MLR documents for the selected country and brand/ product. Select the related document, click Select, and then Done. Now the MLR document is selected and will be attached during sync.
+Good to know!
+Shaman will retrieve a list of MLR documents that relate to your corresponding product/brand.
+This step is not mandatory, you can also add the MLR document later or add it to the presentation directly in Veeva Vault. Each Veeva Vault is configured differently, but usually you need to add an MLR document to your presentation before you can set the CLM to 'Staged' - which in turn you need to sync the presentation to CRM to test it.
+In the MLR tab, you can also export your presentation as a PDF handout, or as a web link to straight to your inbox.
+Using the “Export” tab, click “Synchronise” to sync the CLM to Veeva Vault.
+When the MLR Document is selected, you will also be able to immediately set the presentation to “Set to Staged”, so that you can start testing it in Veeva CRM.
+After syncing, go to Veeva Vault to push content to Veeva CRM for testin
+g (Menu: CRM Publishing, select your CRM Org Full).
+After the initial sync, you can make updates to the presentation and create a new version of the existing presentation in Veeva Vault. Just repeat this step. At update, Shaman will sync only the changes you made.
+Good to know!
+Any updates you make to your presentation will cause the content to revert back to “Staged” status in Veeva Vault, in which case you need to manually approve the content again for the changes to be visible in CRM Production/live.
+In Veeva Vault, set the binder, slides and shared resource file to “Staged”. Then, push the content to CRM Full (Menu: CRM publish).
+You can now test the presentation in CRM Full using the relevant device (iOS, WinApp or Online).
+When you have tested and everything in the presentation is working correctly, you can go back to Veeva Vault and change the status of the binder, slides and shared resource file to 'Approved'.
+
+--- CHUNK 11 (source: confluence, relevance: 0.70) ---
+Title: Latest changes to MLR documents in Shaman
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1652523010
+
+# Latest changes to MLR documents in Shaman
+
+Path: Admin Space > Config & Ops
+
+As part of the latest release 25-14 and upcoming release 25-15:
+Increased visibility of MLR status in document overview tables and document detail pages
+Document detail pages: in “Veeva” section of each document (across all builders), there are two separate cards for “MLR status” and also the “Export status” (Veeva status) as outlined in screenshots below
+Part one:
+Increased visibility of MLR status in document overview tables and document detail pages
+CLM builder
+Approved Email builder
+Visual builder
+Slide builder
+Part two:
+Two separate cards for “MLR status” and also the “Export status”CLM builder
+Approved Email builder
+Visual builder - Shaman status instead of Veeva status (exported to other Shaman builders not Veeva Vault)
+Slide builder - Shaman status instead of Veeva status (exported to other Shaman builders not Veeva Vault)
+
+--- CHUNK 12 (source: pdf, relevance: 0.69) ---
+Title: Untitled
+
+# Shaman __ VVPM workflow (Co-owner) - Arcade.pdf - Page 2
+
+1. The user starts by creating an email in Shaman.
+2. Lets see the email design
+View online Made with Arcade
+
+[Visual Context: This PDF page shows two sequential steps in creating an email workflow within the Shaman application:
+
+## Visual Elements:
+- **Left sidebar navigation** with sections including: General, Veeva Status, First Impression, Veeva Details, Content Tagging, Email Fields, Fragments, Documents, UTM Tracking, History, and Preview
+- **Top navigation tabs**: Overview, MagicDrop, Design (highlighted in green circle in step 2), Test, MLR, and Touch
+- **Main content area** showing workflow configuration options
+- **Right panel** displaying an email template preview with product imagery and "ABOUT PRODUCT" content
+- **Status indicators** showing "MLR status" and "Export status" as "Document not synced" and "Document not synced" respectively
+
+## Hotspots/Highlights:
+- **Step 2 highlights the "Design" tab** with a green circle, indicating this is the key action area
+- The Design tab is visually emphasized to show where users should click to proceed
+
+## Screenshots:
+Both screenshots show the Shaman email workflow interface in different states:
+- **Step 1**: Shows the general email setup/configuration view
+- **Step 2**: Shows the transition to the Design tab view for email template editing
+
+## Action Context:
+The user progression involves:
+1. **Initial setup**: Configuring basic email parameters in the General section
+2. **Design transition**: Clicking the "Design" tab (highlighted) to access email template design tools
+
+The interface suggests this is a collaborative email marketing platform with approval workflows (MLR status) and multi-user access, as indicated by the "Co-owner" designation and various status tracking elements.]
+
+--- CHUNK 13 (source: confluence, relevance: 0.69) ---
+Title: Veeva Promomats Integration (part 1)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1291485185
+
+# Veeva Promomats Integration
+
+Path: Admin Space
+
+Overview
+This page provides an overview of our integration with Veeva Promomats, detailing the permissions required for API Integration and testing checklist.
+Required permissions summary
+For API integration, Shaman only needs a basic VVPM Agency User with the following access:
+Binders
+Ability to create, view, and edit binders (Multichannel Presentations)
+Slides
+Ability to create, view, and edit slides.
+Email Templates
+Ability to create, view, and edit email templates.
+Email Fragments
+Ability to create, view, and edit email fragments.
+Template Fragments
+Ability to create, view, and edit template fragments.
+Materials (or other document types used for MLR)
+Ability to create, view, and edit materials required for MLR compliance.
+The integration user should not rely on SSO, as the VVPM API requires authentication with a username and password.
+Customer Checklist
+Ensure that the Integration has full versioning access to be able to update documents once they are created. Use the below guidance to double-check versioning access.
+https://app.tango.us/app/embed/Checking-Versioning-Access-Admin-Settings-673a811db09d406a81d7e145de59a472
+Content sourced from Shaman should be accessible to the appropriate VVPM users who will manage document stage transitions and that versioning is not restricted solely to the Owner.
+Shaman Testing Checklist
+Please find below the checklist for testing scenarios that need to be completed for each account.
+
+--- CHUNK 14 (source: features, relevance: 0.69) ---
+Title: Feature 43
+
+# Feature 43
+
+Feature Name: Feature 43
+
+The VaultIntegrationUser feature enables seamless integration between Shaman's content authoring platform and Veeva Vault, allowing users to export content directly to Vault without needing to re-authenticate each time. This feature requires Integration Vault Key configuration and streamlines the workflow for pharmaceutical marketing teams, medical affairs professionals, and content managers who regularly publish approved materials like Closed Loop Marketing (CLM) presentations, Approved Email (AE) campaigns, and regulatory documents to Veeva Vault. System administrators and Veeva Vault administrators typically configure this integration to eliminate the friction of repeated login prompts during content publishing workflows. The feature is particularly valuable for organizations with high-volume content production where teams frequently move finalized pharmaceutical marketing materials, medical communications, and compliance-reviewed content from Shaman's authoring environment into Veeva's commercial content management system. Users searching for Veeva Vault connectivity, single sign-on integration, automated publishing workflows, or streamlined content deployment would benefit from this authentication-free export capability.
+
+Details:
+- Feature name in Superadmin: VaultIntegrationUser
+- Builder: Shared
+- Deprecated: No
+- Feature Description: Enables seamless Veeva Vault exports without re-authentication (Requires Integration Vault Key configuration)
+- Default (When customer has the builder)
+/premium: Default customer
+- AI: No
+
+
+This feature is called Feature 43.
+
+--- CHUNK 15 (source: confluence, relevance: 0.69) ---
+Title: MLR Documents | Emails (part 5)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1139048489
+
+# MLR Documents | Emails
+
+Path: Admin Space > Approved Email Builder
+
+for internal tracking and management within the Shaman system. Is not exported to VVPM.
+Name
+True
+Text
+Specifies VVPM name of the document.
+Subtype
+False
+Static
+Defines VVPM Subtype for the document. Values are managed in the MLR Document Subtype Tab.
+Method of dissemination
+True
+Select
+Options are defined in Label Details.
+Material intent
+True
+Select
+Options are defined in Label Details.
+Audience
+True
+Multiselect
+Options are defined in Label Details.
+Expiration Date
+True
+Date
+Specifies the document's expiration date.
+Mlr approved document number
+True
+Text
+Approval number as provided by the external MLR platform
+Title
+False
+-
+Applies respective field to MLR document.
+Product
+True
+Disabled Select
+Uses product/brand selected for Email Template
+Country
+True
+Select
+Allows selection from available company countries
+Language
+True
+Select
+Allows selection from available company languages
+Viewable rendition
+True
+File upload
+Allows uploading a document with the visible layout of approved document
+Fuse approval proof
+True
+File upload
+Allows uploading Proof document from the MLR system
+Lifecycle
+False
+-
+Static field that determines the appropriate lifecycle within the VVPM system.
+Classification Email Create
+True
+Select
+Sets classification in addition to Type and Subtype of a document.
+
+--- CHUNK 16 (source: pdf, relevance: 0.69) ---
+Title: Untitled
+
+# Shaman & Veeva Vault Integration Guide v4.pdf (part 14)
+
+m Shaman
+Fragment
+Template
+Email Template, Approved Create New Draft Generate new version,
+Email Fragment, may need re-approval
+Fragment
+Template
+Component Approved View Retrieve reusable
+(Image, Graph) approved visuals (source
+files) during authoring
+Page 14/22
+
+7. Configuring the Shaman accounts
+To ensure a seamless user experience when interacting with Veeva Vault PromoMats
+(VVPM), your organization's Shaman accounts will be configured to align with your
+document types, fields and lifecycles.
+7.1 Required Document Fields Mapping
+To create and sync documents to Vault, users in Shaman must provide all required
+document fields. During implementation, we configure Shaman to expose only the relevant
+metadata for your Vault configuration, ensuring:
+● Field names, types, and dependencies mirror your Vault setup
+● Required fields are clearly indicated to end users
+● Field values are validated before sync
+7.2 Dynamic Object Integration
+If your Vault implementation uses custom objects (e.g., for message tagging,
+segmentation, or campaign associations) that are updated frequently, we can configure a
+dynamic sync between Shaman and Vault. This ensures:
+● Object values remain current in Shaman
+● Users always select from an up-to-date list
+● Integration respects object relationships during document creation
+7.3 Naming Convention Support
+To support consistency and traceability, Shaman can include a document naming generator
+based on your internal naming conventions. Naming logic may incorporate values such as:
+Brand, Country, Language, Marketing Message, Content Theme etc.
+This ensures naming consistency across documents created from different user groups or
+geographies.
+Page 15/22
+
+--- CHUNK 17 (source: features, relevance: 0.69) ---
+Title: Feature 31
+
+# Feature 31
+
+Feature Name: Feature 31
+
+The VeevaVault feature provides comprehensive integration capabilities between Shaman's pharma content authoring platform and Veeva Vault, enabling seamless content management workflows across both systems. This shared builder feature allows pharmaceutical marketing teams, medical affairs professionals, and content administrators to synchronize documents, maintain version control, and streamline content approval processes between Shaman and their Veeva Vault document management system. Users can leverage this integration to automatically transfer approved content like Closed Loop Marketing (CLM) presentations, Approved Email (AE) templates, and medical information materials from Shaman's authoring environment directly into Veeva Vault repositories. The feature supports common pharmaceutical content workflows including document lifecycle management, regulatory submission preparation, and multi-channel content distribution while maintaining compliance with industry standards. Organizations using Veeva CRM, Veeva Vault PromoMats, or other Veeva applications will find this integration essential for creating unified content management processes that span from initial authoring through final distribution to field teams.
+
+Details:
+- Feature name in Superadmin: VeevaVault
+- Builder: Shared
+- Deprecated: No
+- Feature Description: Enables comprehensive Veeva Vault integration capabilities
+- Default (When customer has the builder)
+/premium: Default system
+- AI: No
+
+
+This feature is called Feature 31.
+
+--- CHUNK 18 (source: slack, relevance: 0.69) ---
+Title: Untitled
+
+[2025-07-01] Maurice van Leeuwen: *Improve Shaman &lt;&gt; PromoMats Integration*
+This is a topic we're also discussing with Laurent and involves same points:
+• Link MLR to Multichannel
+• Change ownership
+• MLR Locking
+• Open in Shaman webaction (external ID)
+• Import Components from VVPM in Shaman
+
+--- CHUNK 19 (source: pdf, relevance: 0.68) ---
+Title: Untitled
+
+# Shaman __ VVPM workflow (Co-owner) - Arcade.pdf - Page 3
+
+3. Nicely done! The email looks great and is ready to go into MLR review. Click the MLR tab.
+Nicely done! The email looks great and is ready to go into MLR review. Click the MLR tab.
+4. Click Create new to create a MLR document for this email in Veeva Vault.
+Click Create new to create a MLR document for this email in Veeva Vault.
+View online Made with Arcade
+
+[Visual Context: This page shows two sequential steps in a workflow tutorial for transitioning an email from design to MLR (Medical Legal Regulatory) review:
+
+## Visual Elements & Interface:
+- **First screenshot**: Shows an email design interface with a medical/pharmaceutical email template featuring "Xantura - Your First Line of Defense" branding, including video content and product information sections
+- **Second screenshot**: Displays an MLR document export dialog with various toggle options for document settings
+
+## Hotspots & Highlights:
+- **Step 3**: A green circular highlight appears to indicate the MLR tab location in the top navigation
+- **Step 4**: A green circular highlight points to a "Create new" button in the MLR document creation interface
+
+## Screenshots Context:
+1. **First screenshot**: Shows a completed email design in what appears to be a marketing email builder, with the email ready for review
+2. **Second screenshot**: Shows the MLR export/creation dialog with options like "Include responsive design", "Compare against previous PDF version", and other document settings, with "Send to Vault" and "Download" buttons at the bottom
+
+## Required Actions:
+1. **Navigate to MLR tab**: User needs to click the highlighted MLR tab to switch from the design view to the MLR workflow section
+2. **Create MLR document**: User must click the "Create new" button to generate a new MLR document in Veeva Vault for regulatory review of the completed email
+
+This represents a handoff point where marketing content transitions into the regulatory approval process.]
+
+--- CHUNK 20 (source: helpcenter, relevance: 0.68) ---
+Title: Create an MLR Document in Shaman for approved email
+URL: https://help.shamancloud.com/en/articles/5886155-create-an-mlr-document-in-shaman-for-approved-email
+
+# Create an MLR Document in Shaman for approved email
+
+In this article:
+What is MLR document creation in Shaman?
+How to create an MLR document in Shaman and sync your content to OnCore Vault?
+Link to an existing MLR document in OnCore Vault
+What is MLR document creation in Shaman?
+MLR document creation for approved email in Shaman is designed to further simplify the process of creating multi-channel content for OnCore Vault.
+An MLR document is a combination of a visual rendition of your email content, and the MLR proof you receive that approves the distribution of the email content you are creating for a specific amount of time and to a specific audience. Without an MLR document, it is not possible to approve content in OnCore Vault and make it available for your end users to users.
+We understand that not all of the Shaman users in your organization will have access to OnCore Vault, so we have enabled a tool in Shaman that allows all users to create an MLR document in Shaman and sync their email fragments or templates directly to OnCore Vault (based on the email and your configuration).
+The workflow outlined below means that Shaman users only need to contact their local OnCore Vault admin once in the process - to approve the MLR document for distribution and also approve the content (email fragments, email templates, or template fragments) in OnCore Vault.
+In this article we will take you through step by step how to create an MLR document, and then sync your content to OnCore Vault.
+How to create an MLR document in Shaman and sync your content to OnCoreVault?
+Once you have completed the
+Veeva settings
+,
+added copy
+,
+created a design
+and
+tested your email
+, click on the tab “MLR” from the Overview page of your email fragment or template.
+From here, you can export a PDF of your email fragment or email template to then send for review and approval in your FUSE or local approval system.
+Export PDF options
+Include responsive design (mobile view):
+Enabling this option will include a rendition of the mobile version of your email design in the same PDF export as the desktop version.
+Compare against previous PDF version:
+Compare text of email versions in PDF export: If you have edited the text in your email and saved the versions separately (you can learn more about email versions
+here
+) you also have the option to compare the current version of your email, with any previous different version side by side in a PDF.
+Include document information
+Good to know!
+If you are exporting an email template, you will see two additional options appear underneath the “PDF file” option: “Include selected email fragments” and “Include selected template fragment”.
+You can click these toggles to enable them to show either email fragments or the selected template fragments in the exported PDF file.
+Then, click the “Send to Email” button. You will receive the PDF file to your email address within a few minutes.
+Good to know!
+- A PDF file means you will receive a PDF of your email template or fragment.
+- PDF file including related fragments means you will receive the email template and the email fragments used.
+Top tip:
+Make sure to read our short article in which we explain in more detail what email fragments are and how they can be used.
+Here is where the process gets interesting.
+You will see two options available in the section "MLR document in Veeva Vault".
+Create new:
+select this option if you wish to create an MLR document in Shaman
+Link to existing:
+select this option if you wish to link to an MLR document manually uploaded and approved for distribution in OnCore Vault. Click here to view more information on how to link to an existing MLR document.
+Click "create new" to begin the process. You will then be redirected to a page where you can add all the details for your MLR document:
+Document Name*:
+This field is automatically populated from the name of the corresponding email content you are creating the MLR document for. You can edit the name by simply typing in this field. This is an obligatory field.
+Description
+: This field is automatically populated from the description of the corresponding email content you are creating the MLR document for. You can edit the name by simply typing in this field. This is an optional field.
+Product/Brand*
+: This is a dropdown menu, automatically populated with the product/brand assigned to your email template or fragment. This is an obligatory field.
+Country*
+: This is a dropdown menu, automatically populated with the country assigned to your email template or fragment. This is an obligatory field.
+MLR Approval Nr*
+: this is a free text field and will usually be a five or six-digit number that can be found on your approval document. This is an obligatory field.
+Material Intent*:
+Ordinarily there are two options to choose from here, promotional and non-promotional (but this may vary depending on your account settings). You can select the value that matches your approval document. This is an obligatory field.
+Audience*:
+Ordinarily there are multiple options available in a dropdown menu (eg. Physician, Nurse, etc). You can select the value that matches your approval document. This is an obligatory field.
+Language*
+:  This is a dropdown menu, automatically populated with the language assigned to your email template or fragment. This is an obligatory field.
+Expiry Date*:
+Using the calendar which opens when you click on this field, you can select the expiry date which matches your approval document. This is an obligatory field.
+Once you have completed these details, you need to attach the document exported from the FUSE/local approval system along with a viewable rendition of the content in PDF form.
+MLR document*
+is the viewable rendition of the content in PDF (which you can export directly from Shaman using the "Export as PDF" option.
+MLR Proof*
+is the PDF document or email from the FUSE/local approval system.
+You can then click the "Create" button in the top right-hand corner to create your MLR document:
+You will be directed to a page where you can view the progress of the creation of the MLR document:
+Once the MLR document has been created, you can see your MLR document now attached.
+You can now proceed to the "Export" tab to sync your email content to OnCore Vault. Make sure that the "set content to staged lifecycle" is enabled before clicking the "export to Vault" button.
+Take a look at
+this article
+for more information on exporting email content to OnCore Vault.
+Link to an existing MLR document in OnCore Vault
+To link an MLR document which has been manually uploaded and approved in OnCore Vault, from the "MLR" tab click the "Link to existing" option.
+Here you will be able to see all MLR documents which are currently available for use for the Product/brand assigned to the email content you are working with.
+Good to know!
+If you do not see an MLR document that has recently been uploaded and approved to OnCore Vault, click the "Update button" to retrieve the latest MLR documents.
+To select an MLR document from the list, click the small circle next to the corresponding document and then click the "Select" button in the top right corner.
+You will then see the MLR document attached to your email content.
+You can preview the details of the MLR document (such as creation date, Product/brand, etc) by clicking "Details".
+Alternatively, you can remove the MLR document by clicking the "Remove MLR document" button.
+
+--- CHUNK 21 (source: slack, relevance: 0.68) ---
+Title: Untitled
+
+[2025-08-29] Maurice van Leeuwen: You are right @Filip Söderström without a VVPM process to add Shaman to the doc, either a user action or auto sharing rule it will cause a sync failure
+
+--- CHUNK 22 (source: pdf, relevance: 0.68) ---
+Title: Untitled
+
+# Shaman & Veeva Vault Integration Guide v4.pdf (part 9)
+
+nel Content
+● Once a document is MLR approved in Vault, Shaman enables users to generate and
+sync Multichannel content back into PromoMats. This includes:
+○ Email Templates
+○ Email Fragments
+Page 9/22
+
+○ Fragment Templates
+○ Multichannel Presentations (Binder)
+○ Multichannel Slides, including Shared Resources
+● For each multichannel asset, Shaman can handle metadata population, document
+relationships, and the distribution package upload where applicable.
+4.3 Component Retrieval and Linking
+● Import Approved Assets While authoring content in Shaman, users can browse
+and import approved documents (e.g. images, graphs, visuals) stored in Vault. When
+imported, the component will be auto resized for the content channel (eg email)
+These are typically assets with filtering like:
+○ Product/country = Content user is working on
+○ Document Type, eg type: Component and subtype: Image or Graph
+○ Status = Approved
+○ File format = bitmap or PDF
+● Component Linking to Final Materials When a new composite asset is created and
+synced from Shaman to Vault (e.g. as a Material for MLR review), Shaman can
+automatically create document relationships to the approved source components,
+maintaining traceability.
+4.4 Document Access
+● Retrieve Document Lists and Metadata Shaman can query document lists from
+Vault (e.g., Materials, Related Pieces, Modular content) including metadata fields.
+This enables:
+○ Using an existing VVPM MLR document or placeholder in Shaman
+○ Auto-linking of Related Pieces
+4.5 Object Access
+● Retrieve Vault Object Lists Shaman can access custom or standard Vault Objects
+(e.g., Message Tags, Campaigns, or Segments) to support metadata mapping and
+relationships with documents. This supports downstream targeting and compliance
+tagging.
+Page 10/22
+
+--- CHUNK 23 (source: confluence, relevance: 0.68) ---
+Title: Configuration & Operations workflow (part 4)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1534951437
+
+# Configuration & Operations workflow
+
+Path: Admin Space > Config & Ops > Workflow
+
+ilders where configuration gaps in any single stage may cause failures
+Field Validation
+: When adding new values, confirm they appear in the designated fields and function as expected in workflows
+3. Integration Testing
+Export Verification
+: For features requiring Vault integration, conduct export tests to confirm proper data transfer.
+This step might require help from people with access to the customer’s Vault.
+All test documents must be removed from the customer's Vault environment and Shaman account following verification.
+After configuration
+Completion Process
+Upon successful implementation of the requested features and/or configurations, the task status will be changed to "Done."
+A report detailing the completed work, accompanied by screenshots where applicable, will be provided in the Jira ticket comments.
+Task Follow Up/Reopening
+Issue Resolution Procedure
+If issues arise—such as incorrect configuration, non-functional features, inaccessible elements, or requirement changes—the task should be moved to the "Clarifications" section of the board by the Reporter. Comments should specify the necessary changes or clarifications required to proceed.
+Related Task Management
+For requirements that mirror an existing completed task but require:
+Implementation at a larger scale
+Application to different accounts
+Implementation with variations
+A new task should be created to facilitate accurate tracking.
+
+--- CHUNK 24 (source: intercom, relevance: 0.68) ---
+Title: Untitled
+
+[Intercom conversation - 2025-11-10]
+
+Customer (Theresa Hermes): Hey! I would like to link a MLR document from Veeva Vault. Even though it is approved fro distribution I cannot find in within Shaman. Name: Neuro_DGPPN 2025_VAE_Symposium & Meet the expert. ID: 1559502. Can you please help. I need this assets to publish to Vault.
+
+Agent (Operator): You’ll get replies here and in your email:✉️theresa.hermes@takeda.comOur usual reply time🕒under 2 minutes
+
+Agent (Sophie Dimopoulou): Hi Theresa,Thank you for getting in touch. Could you please share the URL of the content you are working on in Shaman, and additionally, a screenshot of the approved MLR as it is shown in Veeva?
+
+Customer (Theresa Hermes): This is the url of approved. mail in Shaman:https://ae.eu1.shamancloud.com/takeda-de-neuroscience/approved-emails/template/195/steps/mlr
+
+Customer (Theresa Hermes): Last one is the approved MLR in Veeva.
+
+Customer (Theresa Hermes): Can you help? Is there a way to publish without linking to MLR?
+
+Agent (Sophie Dimopoulou): Thank you for sharing the PDF, Theresa. However, I will need you to send me a screenshot of how you see the MLR in your Veeva account.Please make sure the General information panel is visible in the screenshot.
+
+Customer (Theresa Hermes): Does this help?
+
+Agent (Sophie Dimopoulou): Yes, thank you very much. I will investigate more and get back to you with an update.
+
+Customer (Theresa Hermes): Thank you! This VAE needs go live today or tomorrow. Please let me know when I can expect results. Thanks!
+
+Agent (Sophie Dimopoulou): Thank you for your patience, Theresa.As I can see, in your MLR document in Veeva, the Brand is Neuroscience, which is not an available Brand in the account.​Could you please update the Brand in the MLR to Brand Takeda and then try once more to find the MLR Document in your Shaman account?
+
+Customer (Theresa Hermes): I think the MLR document has Neuroscioence as a product because it is a medical mailing. Are you shure you cannot update the Brand additionally to Neuroscience in Shman?
+
+Agent (Sophie Dimopoulou): Thank you for letting me know, Theresa.As a first solution, we should check if you can update the Brand in the MLR and if after that it will appear in the list of available MLRs. If that is not possible, then we should explore other alternatives.Did you manage to update the Brand in the MLR in your Veeva account?
+
+Customer (Theresa Hermes): Thanks, Sophie. I cannot update the Brand in MLR. I will ask the brand manager to do so. I will come back to you when it is done.
+
+Agent (Sophie Dimopoulou): Thank you so much for the update, Theresa.Please let me know when it's complete, and we will check together if the MLR will appear in this list.​
+
+Customer (Theresa Hermes): Hello! We cannot update the Brand in the MLR as it belongs to ORIKO which is selected as Product Neuroscience in Veeva. I think it would be better in longterm to add Neuroscience as a product/Brand.
+
+Agent (Sophie Dimopoulou): Thank you for trying, Theresa.In this case, we will try to add Brand Neuroscience to the account and check if, by that the MLR will appear.Would you like me to proceed with the request?
+
+Customer (Theresa Hermes): Yes, please proceed. Can you let me know when the addition of the new Brand would be finalized? I need to hold deadlines until tomorrow.
+
+Agent (Sophie Dimopoulou): For sure, Theresa.I will inform you once the Brand has been added to the account.
+
+Agent (Sophie Dimopoulou): 🔗Sophie DimopouloulinkedOPS-1440: Takeda DE Neuroscience - Add BrandJira · shamanapp.atlassian.net
+
+Customer (Theresa Hermes): Great! Thank you!
+
+Agent (Sophie Dimopoulou): Thank you for your patience, Theresa.The Brand Neuroscience has been added to the account. Could you please change the Brand in the email template and let me know if the MLR now appears in the list of available MLRs?
+
+Customer (Theresa Hermes): Hi Sophie, sure, I will do and come back to you.
+
+Customer (Theresa Hermes): HI Sophie! 1) I cannot find any Neuroscience product or brand in Overview, 2) there is no filter for neuroscience in MLR, 3) I can see in MLR page tat only assets until 6th November are visable. That might be a problem.
+
+Agent (Sophie Dimopoulou): Hi Theresa,If you refresh the page, you will see the new Brand. I also tried to update the list of available MLRs and the one we want for this email is not there.I will take a closer look and get back to you shortly.
+
+Customer (Theresa Hermes): Now I see the product, but the document is missing. Can you find it? How do you usually look it up - via ID or document name?
+
+Agent (Sophie Dimopoulou): Both ways normally work. In this case, you will need to manually link the MLR to the email template in Veeva.I will keep investigating the situation and will get back to you with more information tomorrow.Thank you for the cooperation on this one, Theresa.​
+
+Customer (Theresa Hermes): Hi Sophie, now I could find the MLR document and link it to the approved mail. Thank you!
+
+Customer (Theresa Hermes): One last question: What happens if I link the MLR documet manually in Shaman? Does it open another MLR in Veeva?
+
+Agent (Sophie Dimopoulou): Goodmorning Theresa,Hope you had a nice afternoon.To link the MLR to the email template, please open the email template document in Veeva PromoMats (this is the link to the email template in Veeva:https://shire-promomats-international.veevavault.com/ui/#doc_info/1563082) and navigate to theRelationshiptab on the right hand side, under the sectionOther Related Documents, click on the plus symbol, a window will appear where you can search for the MLR document to link the email template.​Here is an example from our Vault:Additionally, what do you mean when you say link manually the MLR in Shaman? The MLR document is not appearing in Shaman, this is why you will need to link it manually in Veeva.Looking forward to your reply.
+
+Agent (Sophie Dimopoulou): Hi Theresa,As I can see, you have successfully linked the MLR to the email template.Is there anything else I could help you with?
+
+Agent (Sophie Dimopoulou): Hi Theresa,I will close this conversation for now, since we did not receive any answer from your side. If you wish to share feedback or ask further questions, please feel free to write me or the team a message. We would be happy to help you.Have a nice day 🙂SophieTeam Shaman
+
+Agent (Operator): Help Sophie understand how they’re doing:
+
+Agent (Operator): [Conversation Rating Request]
+
+--- CHUNK 25 (source: confluence, relevance: 0.68) ---
+Title: MLR Documents | Emails (part 2)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1139048489
+
+# MLR Documents | Emails
+
+Path: Admin Space > Approved Email Builder
+
+enable
+Feature
+IsActive
+MlrCreationForEmailDocument
+YES
+MlrDocuments
+YES
+The
+MlrDocuments
+feature was previously limited to linking Emails or Presentations to existing MLR Documents within the VVPM. However, to enable the
+MlrCreationForEmailDocument
+functionality, the
+MlrDocuments
+feature must be activated.
+Permissions
+: All users have access to the MLR step if enabled
+In-App Screenshot
+Configuration Options
+Settings Overview
+: List and explain the various settings available within the feature.
+Customization
+: Describe any customization options available.
+Input fields in
+Create an MLR Document in Veeva Vault
+tab are controlled in
+Veeva Vault Labels
+by the labels with type
+Mlr document.
+When a Veeva Vault Label generates input within the Shaman Front-end and is configured as a static value, the input field will not be displayed.
+
+--- CHUNK 26 (source: pdf, relevance: 0.68) ---
+Title: Untitled
+
+# Shaman & Veeva Vault Integration Guide v4.pdf (part 5)
+
+ntent Review and Approval
+Once content is created in Veeva Vault as material, content owners can initiate and
+manage the Medical, Legal, and Regulatory (MLR) review process in VVPM as usual.
+Page 5/22
+
+2.3 Content Publishing
+Upon MLR approval in VVPM, Shaman can auto-generate final HTML output ready for
+publishing.
+Publishing workflow depends on content type:
+● For Detail Aids (CLM) and Approved Email: Users auto-generate HTML content in
+Shaman and sync it into Veeva Vault PromoMats as Email Templates, Email
+Fragments, Template Fragments, or Multichannel Presentation with
+Multichannel Slides. Metadata can be configured directly in Shaman or inherited
+from the source Material document. Depending on your SOP, documents can be
+automatically linked (e.g., to approved reference documents) during the sync
+process.
+● For other content channels/ platforms (eg marketing email, web): Users
+auto-generate HTML content in Shaman to download for other platforms.
+NB 1: Content is locked from export until it reaches the appropriate approved state in Vault. This
+ensures regulatory alignment and reduces the risk of premature distribution.
+NB 2: Shaman is not a publishing platform.
+2.4 Document Lifecycle Tracking and Permissions
+Once synced to Vault, content in Shaman is linked to the Veeva Document ID. This
+enables Shaman to:
+● Track the document’s lifecycle state in real time
+● Control what actions users can perform based on lifecycle stage (e.g., restrict
+editing of content in review, restrict export of non approved content)
+● Support version-specific logic for editability, exportability, and compliance
+checks
+This tight integration ensures that content remains consistent across systems, aligns
+with your SOPs, and respects Vault governance protocols — while unlocking a more
+efficient and user-friendly content creation process.
+Page 6/22
+
+--- CHUNK 27 (source: confluence, relevance: 0.68) ---
+Title: Shaman builder descriptions (to share with CS/BD) (part 3)
+URL: https://shamanapp.atlassian.net/wiki/spaces/Product/pages/1862991874
+
+# Shaman builder descriptions (to share with CS/BD)
+
+Path: Product
+
+ion positions, footnotes, layout type and personalisation variants (e.g. persona, segment). Global brand content cards can be shared via the Content Cards Hub and translated or localised for markets. Existing CLM content can be converted into Smart Content Cards using MagicExtract. Cards can be exported to Veeva Vault PromoMats as MLR Material for review and approval, or it can be mapped to Veeva Modular Content for downstream use.
+Shaman Compliance Assistants (incl MLR Compare)
+Built-in compliance checks that run during content authoring to ensure tactics are proofread, high quality, and MLR-ready. Includes assistants for content quality (e.g. missing unsubscribe, approval number or URLs, token errors), language (grammar, spelling, readability across 35+ languages), and MLR Compare. Issues versus approved content are flagged in real time so authors can resolve them before submission to MLR, reducing rework and review cycles.
+Available in the Email Builder and Landing Page Builder, with extension to Slides planned for 2026.
+
+--- CHUNK 28 (source: pdf, relevance: 0.67) ---
+Title: Untitled
+
+# Shaman __ VVPM workflow (Co-owner) - Arcade.pdf - Page 11
+
+16. Log in to Shaman to edit the email. If configured you can also use the web action 'Open
+in Shaman' in Veeva Vault.
+17. Back in Shaman, go to Design tab
+Back in Shaman, go to Design tab
+View online Made with Arcade
+
+[Visual Context: This page shows two key steps in the Shaman workflow tutorial:
+
+## Visual Elements:
+
+**Step 16 Screenshot:**
+- Shows a Veeva Vault interface with a document view
+- Features a right-click context menu with multiple options including "Open in Shaman" (highlighted with a green circle)
+- The document appears to be a product information sheet with an "ABOUT PRODUCT" section
+- The interface shows typical document management tools and navigation
+
+**Step 17 Screenshot:**
+- Displays the Shaman application interface in the Design tab
+- Shows a workflow designer with various configuration options in the left sidebar (Overview, General, Content Tagging, Email Fields, etc.)
+- The main area shows workflow status sections for "MLR status" and "Export status" 
+- A document preview panel on the right shows the same product sheet
+- The "Design" tab is clearly highlighted with a green circle in the top navigation
+
+## Hotspots/Highlights:
+
+1. **Green circle around "Open in Shaman"** in the Veeva Vault context menu - indicating this is the key action to transition from Vault to Shaman
+2. **Green circle around "Design" tab** in Shaman - showing where users need to navigate once in the application
+
+## Action Context:
+
+The user is being guided through a two-step transition: first accessing Shaman from Veeva Vault using the right-click context menu option, then navigating to the Design tab within Shaman to continue editing the email workflow. This represents a typical handoff between document management (Vault) and workflow design (Shaman) systems.]
+
+--- CHUNK 29 (source: confluence, relevance: 0.67) ---
+Title: Veeva labels (part 1)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/889552897
+
+# Veeva labels
+
+Path: Admin Space
+
+Veeva Labels are used in Shaman Superadmin to configure Shaman accounts for the customers Veeva Vault Configuration to ensure succesful sync between Shaman and Vault Promomats.
+How are Veeva labels used?
+With Veeva label you can manage the creation and mapping of Veeva fields in Shaman. Veeva labels will inform:
+Fields to be included in a Veeva API Call, to create, update or view (fetch) data.
+Map fields by configuring the right Veeva API name and correct value options.
+Enable fields (show) in Veeva information/ Veeva Details cards in Shaman. Most fields are required (determined in front end html) and if enabled, Shaman will also validate for these fields
+Structure of Veeva labels
+When defining a Veeva Label you need to add the following fields:
+VeevaVaultLabelType
+The object of the field
+Name
+Existing field name, maps field with Front end html and in some cases with Veeva Connections (lambda functions).
+
+--- CHUNK 30 (source: pdf, relevance: 0.67) ---
+Title: Untitled
+
+# Shaman & Veeva Vault Integration Guide v4.pdf (part 2)
+
+9.1 Configure the VVPM webaction “Open in Shaman” 17
+10 Appendix 18
+10.1 Lifecycle: Material/Promotional (Sample) 18
+10.2 Configuration Examples for Shaman Integration User by feature set 19
+Page 2/22
+
+1. Why Shaman Content Authoring
+1.1 Introduction and the Shaman Approach
+Shaman is your partner on the journey to content excellence. In today’s life sciences
+landscape, content is a critical enabler — powering commercial success across field
+teams and omnichannel marketing. Next it fuels sales force effectiveness,
+segmentation strategies, and next-best action recommendations. All these depend on
+producing the right content, at the right time.
+Veeva Vault PromoMats plays a central role in this content ecosystem, acting as the
+system of record for compliant content management. Shaman complements this by
+addressing a major upstream challenge: how content is created. As a self-service
+content authoring platform, Shaman provides a scalable, structured, and predictable
+way to allow local brand teams to generate high-quality content, ready for MLR review.
+By integrating seamlessly with Veeva Vault, Shaman Content Authoring:
+● Empowers content creators to work faster and more autonomously
+● Significantly reduces content production costs and timelines
+● Enables greater reuse and consistency of messaging across brands, markets,
+and channels
+● Drives adoption by embedding into existing governance frameworks (SOPs,
+permissions, lifecycles)
+While Shaman is a SaaS platform, our approach goes beyond technology — it combines
+software, services, and consultancy. We invest heavily in onboarding and adoption,
+working closely with your teams to align our platform with your organizational needs
+and regulatory requirements.
+
+--- CHUNK 31 (source: intercom, relevance: 0.67) ---
+Title: Untitled
+
+[Intercom conversation - 2025-07-02]
+
+Customer (Finn Meyer): hey! how is the MLR prozess within Shaman linked to the MLR Process within promomats?
+
+Agent (Operator): You’ll get replies here and in your email:✉️finn.meyer@merz.chOur usual reply time🕒under 1 minute
+
+Agent (Operator): In the meantime, these articles might help:
+
+Agent (Operator): Create an MLR Document in Shaman for an approved emailKaty MooreHow to create an MLR document for Marketing Email content in ShamanKaty MooreShaman Hero: Second trimester 2024 editionLiliana RamosMore in the Help Center
+
+Agent (Liliana Ramos): Hi Finn,​I hope you are doing well!Please bear with me while I take a look at the MLR set-up on your Merz account. I'll get back to you.
+
+Customer (Finn Meyer): great! thanks!
+
+Agent (Liliana Ramos): Hi again Finn,You can create the MLR Document for a Presentation or an Email directly in your Shaman account in the MLR tab of the content you are creating.Once the creation is complete, the MLR Document will be created in PromoMats.Later, when you export the content (presentation or email) to PromoMats, the MLR Document will be related to the content. Normally, the MLR Document can be found in the Related Approved Documents section, but this might be different on your PromoMats.I hope this information is useful. Please let me know if you have any additional questions.
+
+Customer (Finn Meyer): great thanks.
+
+Customer (Finn Meyer): do I have to create the MLR document in shaman or can I also just strat the MLR process within promomats?
+
+Customer (Finn Meyer): since so far I have only startet the MLR process within promomats after uploading the approved email to it.
+
+Agent (Liliana Ramos): I recommend starting the MLR process in Shaman, as it streamlines the workflow. I would invite you to give it a try next time you create an Approved Email, and reach out to us if you have any questions.
+
+Customer (Finn Meyer): alright! thanks a lot! :)
+
+Agent (Liliana Ramos): You are welcome, Finn!Is there anything else I can assist you with at the moment?
+
+Agent (Liliana Ramos): I'll close this conversation for now, Finn. If you need further help, please reply to this message, and the conversation will reopen.Have a nice evening,Liliana
+
+Agent (Operator): Help Liliana understand how they’re doing:
+
+Agent (Operator): [Conversation Rating Request]
+
+--- CHUNK 32 (source: helpcenter, relevance: 0.67) ---
+Title: Create an iVA in Shaman and Veeva Part 3
+URL: https://help.shamancloud.com/en/articles/12883692-create-an-iva-in-shaman-and-veeva-part-3
+
+# Create an iVA in Shaman and Veeva Part 3
+
+Go to Interactive demo
+81. Once in Veeva Vault click Multichannel Loader.
+82. Click Choose CSV
+83. In the unzipped Shaman folder you will find a csv file. Select it.
+84. You will see a success message. Click Next to upload the zips.
+85. Now select all the zip files from the unzipped Shaman folder.
+86. You see the progress of zips (slides) being uploaded and validated.
+87. Once all zips are validated you can continue.
+88. A summary appears on what Vault is going to do. In this case it will create 1 Presentation with 6 slides and one shared resource slide. To continue, click Complete Load
+89. Vault will now process the zips. This can take 5 to 10 minutes. Please do not logout during the process. Once done, you will receive a notification.
+90. Open the new binder that was just created.
+91. Now we can set all slides to Approved. Let's start with the Shared resource, a special system slide, unique for each IVA, that is not visible in the Binder overview. Click into Slide details to find it.
+92. Click to open Relationships
+93. Click Related Shared Resource
+94. This is the shared resource slide. Click to navigate to it.
+95. On the document page of this Shared resource slide, click to change Draft status
+96. Click Approved.
+97. Click to confirm.
+98. Go back to the Binder. Click the action menu to find Edit Binder. Click to add the Shared resource.
+Click “add” and select “existing documents”
+99. Search for Shared resource.
+Search for Shared resource using either filters on Product and Country, or searching by document number. Click the plus icon on the right-hand side in order to add to the binder.
+​
+100. Click Dismiss when done.
+102. Shared is added. Click Done editing
+103. Open Chevron menu and choose "Approve All Slides"
+104. Now all slides are approved, you can update Draft status to Ready for MLR.
+105. Click Yes to confirm.
+106. Select Submit for Approval
+107. Assign the Marketing and Quality Approver and hit Start
+Go back to Part 1
+Go back to Part 2
+
+--- CHUNK 33 (source: confluence, relevance: 0.67) ---
+Title: Veeva owner manual assignment in Shaman (part 1)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1473576972
+
+# Veeva owner manual assignment in Shaman
+
+Path: Admin Space > Config & Ops > Superadmin - Account settings
+
+Shaman users can now manually select the appropriate document owner when syncing content and MLR documents to Veeva Vault.
+Document owners can manage settings, run workflows, and track progress in Veeva Vault. (Previously “Shaman integration user” was automatically assigned as Document owner, which meant users had to manually assign themselves to documents to manage settings, track progress of a document, etc). This feature streamlines the workflow of Shaman to Veeva Vault even further, removing the manually assignment of Veeva owner step in Veeva Vault.
+How it works: A field called “Document Owner in Veeva Vault” appears in MLR creation AND OR HTML doc creation (depending on which feature(s) are enabled. Users can select a Veeva owner for the MLR/ document.
+These are referred to in Superadmin as “Veeva owners”. Veeva owners do not need to be Shaman users.
+This can be enabled for MLR documents, HTML documents, or both.
+Summary of how to enable steps:
+Request list of Veeva owner(s) from client. Make sure to request: Full name, email address (NB: email address is used as identifier) and Veeva ID.
+We can only change ownership after Shaman integration user also has access to the document using a Sharing setting.
+
+--- CHUNK 34 (source: intercom, relevance: 0.67) ---
+Title: Untitled
+
+[Intercom conversation - 2025-01-30]
+
+Customer (Michaela Hoffmann): Hello, Could you please let me know, how I can reactivate my Template in Veeva Vault? My Template is now expired
+
+Agent (Operator): You’ll get replies here and in your email:✉️michaela.hoffmann@novartis.comOur usual reply time🕒under 1 minute
+
+Agent (Operator): In the meantime, these articles might help:
+
+Agent (Operator): Creating a related piece in ShamanKaty MooreHow to find the Veeva IDLiliana RamosSteps to export an email template and fragmentsFilip SöderströmMore in the Help Center
+
+Agent (Cherokee Hillman): Hi Michaela, thank you for getting in touch.
+
+Agent (Cherokee Hillman): To revive expired content back to approved or staged, first, the expired content must be duplicated in Shaman, creating a completely new piece of content. The process then starts from the beginning - add MLR information, and sync to Veeva Vault before manually approving in Veeva Vault.Please let me know if you have any questions.
+
+Customer (Michaela Hoffmann): But in Shaman it shows me that the Template is approved
+
+Customer (Michaela Hoffmann): 
+
+Customer (Michaela Hoffmann): 
+
+Customer (Michaela Hoffmann): only in Veeva Vault is it expired (key dates)
+
+Agent (Cherokee Hillman): Please bear with me a moment while a take a closer look at this template.
+
+Agent (Cherokee Hillman): I noticed that the Veeva status was not updated automatically. However, after the status was manually updated, Shaman is now reflecting the most recent Veeva status:
+
+Customer (Michaela Hoffmann): OK - than I have to duplicate it and start the  whole process
+
+Agent (Cherokee Hillman): Once a piece of content expires in Vault, it cannot be reverted to the approved status. To simplify the process, Shaman allows you to duplicate the content which you can then re-sync as a new template to Vault.Please let me know if we can assist you with anything else today.
+
+Customer (Michaela Hoffmann): OK Thank you Cherokee
+
+Agent (Cherokee Hillman): You are very welcome! I hope the response was satisfactory and your request has been resolved. If you have any questions or would like further assistance from us, please do not hesitate to contact us.Wishing you a lovely rest of your day.Best regards,CherokeeTeam Shaman
+
+Agent (Operator): Help Cherokee understand how they’re doing:
+
+Agent (Operator): [Conversation Rating Request]
+
+--- CHUNK 35 (source: pdf, relevance: 0.66) ---
+Title: Untitled
+
+# Shaman & Veeva Vault Integration Guide v4.pdf (part 18)
+
+s
+Approved Approved for View document
+Publication, Approved View content
+for Distribution, Ready
+for Distribution
+Expired Expired, Cancelled, View document
+Obsolete, Superceded View content
+Page 18/22
+
+10.2 Configuration Examples for Shaman Integration User by feature set
+API Access Suggested
+Customer Modular Content
+Notes for Integration Material Access Related Documents Links (Claims
+Scenario Content Compare
+User Library)
+Add and remove
+related documents
+based on what was Enhancements
+authored in Shaman to Content
+API access and linked to VVPM Compare
+As the document
+Content required to the item (Can be media, require the
+Owner the Shaman Available for
+Created in Shaman Integration user material for approval documents, Available if Shaman
+Integration user has linking if
+Shaman, sent needs to create the REST API etc any item that configured in Integration
+full access to the configured in
+to Veeva Vault material in VVPM upload and would be in the related VVPM user to be able
+document throughout VVPM
+PromoMats metadata documents section of to create
+all lifecycle states
+population the newly created annotations on
+material can be materials
+automatically submitted.
+populated by Shaman
+Integration User
+Page 19/22
+
+--- CHUNK 36 (source: slack, relevance: 0.66) ---
+Title: Untitled
+
+[2025-09-24] Liliana Ramos: *Improvement suggestion* - We have been receiving more questions about the status of the content not being the same in Shaman and Vault.
+Could we increase the number of Vault syncs, or is that too much trouble?
+
+"Hi, I'm wondering why my fragment export status is draft even though the fragment is in approved state in Veeva Vault" - <https://app.intercom.com/a/inbox/o1w0qyxm/inbox/admin/5040669/conversation/215470981282021?view=List>
+"Hi team,
+Could you please explain why this template is marked as staged in Shaman :
+<https://ae.eu1.shamancloud.com/novartis-fr-ophta/approved-emails/template/882/steps/export>
+but it is Approved for Use in Vault ?" - <https://app.intercom.com/a/inbox/o1w0qyxm/inbox/shared/all/conversation/215470776863696?view=List>
+"can you please remind me why is it still staged
+even though in veeva the material is approved" - <https://app.intercom.com/a/inbox/o1w0qyxm/inbox/search/conversation/215470978525282?query=draft&amp;view=List>
+
+--- CHUNK 37 (source: confluence, relevance: 0.66) ---
+Title: MLR Documents | Emails (part 4)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1139048489
+
+# MLR Documents | Emails
+
+Path: Admin Space > Approved Email Builder
+
+ollow these steps:
+Navigate to Company Settings: Locate and access the MLR Document Subtype tab within the Company Settings section.
+Verify Subtype Existence: Check if any subtypes have been created. The input field will not appear in the Shaman front-end if no subtypes exist.
+Create Subtypes: If no subtypes are present, create one or more subtypes as needed. Once subtypes are added, the input field should appear in the front-end interface.
+Used labels:
+Label Name
+Has Front-end Input
+Input type
+Description
+Type
+False
+Static
+Defines VVPM Type for the document. Default value for MLR Documents is "Material".
+Id
+False
+-
+ID for internal tracking and management within the Shaman system. Is not exported to VVPM.
+Name
+True
+Text
+Specifies VVPM name of the document.
+Subtype
+False
+Static
+Defines VVPM Subtype for the document.
+
+--- CHUNK 38 (source: helpcenter, relevance: 0.66) ---
+Title: How to create an MLR document for Marketing Email content in Shaman
+URL: https://help.shamancloud.com/en/articles/9776516-how-to-create-an-mlr-document-for-marketing-email-content-in-shaman
+
+# How to create an MLR document for Marketing Email content in Shaman
+
+In this article:
+An introduction to MLR documents for Marketing Email content
+How to create an MLR document for Marketing Email content in Shaman
+An introduction to MLR documents for Marketing Email content
+Although Marketing Email templates and dynamic content blocks are not synced and distributed via Veeva Vault, it is still important to be compliant and consistent with every Email that reaches your HCPs. Whilst there is no relation between Salesforce Marketing Cloud and Veeva Vault, there should still be proof that a document has been through the MLR review process.
+An MLR document is a combination of a visual rendition of your email content, and the MLR proof you receive that approves the distribution of the email content you are creating for a specific amount of time and to a specific audience.
+In Shaman, you can easily and quickly create MLR documents for both Marketing email templates and dynamic content blocks. Let's take a closer look.
+How to create an MLR document for Marketing Email content in Shaman
+Once you are ready to create an MLR document for a Marketing email template or dynamic content block, click the “MLR” tab.
+From here, you can export a PDF of your email template or dynamic content block to then send for review and approval, in case you use a different system than Veeva Vault for MLR review and approval.
+Export PDF options
+Include responsive design (mobile view): Enabling this option will include a rendition of the mobile version of your email design in the same PDF export as the desktop version.
+Compare against previous PDF version: If you need to resubmit your content for approval, and want to include a comparison against a previous version (for example; one that was returned during review, or a previously approved version) you can easily do so by enabling the toggle.
+Include document information: Enable this toggle to include the metadata of the Email document in the PDF export.
+Good to know!
+If you are exporting a Marketing email template, you will see an additional option appear underneath the “PDF file” option: “Include email dynamic content”
+You can click this toggle to include dynamic content blocks in the exported PDF file, and approve the campaign as a whole.
+To export your PDF, you can either download directly or click "Send to Email" - your PDF export will be in your Email inbox within a few minutes.
+You will see two options available in the section "MLR document in Veeva Vault".
+Create new: select this option if you wish to create an MLR document in Shaman
+Link to existing: select this option if you wish to link to an existing MLR document that is readily available in your Veeva Vault.
+Click "create new" to begin the process. You will then be redirected to a page where you can add all the details for your MLR document:
+Name*: This field is automatically populated from the name of the corresponding email content you are creating the MLR document for. You can edit the name by simply typing in this field. This is a mandatory field.
+Description: This field is automatically populated from the description of the corresponding email content you are creating the MLR document for. You can edit the name by simply typing in this field. This is an optional field.
+Brand*: This is a dropdown menu, automatically populated with the brand assigned to your email template or dynamic content block. This is a mandatory field.
+Language*: This is a dropdown menu, automatically populated with the language assigned to your email content. This is a mandatory field.
+Country*: This is a dropdown menu, automatically populated with the country assigned to your email content. This is a mandatory field.
+Expiry Date*: Using the calendar which opens when you click on this field, you can select the expiry date of the MLR document. This is a mandatory field.
+Then click “Create” in the top right corner to create the MLR document.
+You will then be able to view the MLR document and corresponding details attached in the MLR section of your email content.
+The next step is to export the email content from Shaman, take a look at
+this article here
+for more information.
+
+--- CHUNK 39 (source: slack, relevance: 0.65) ---
+Title: Untitled
+
+[2025-01-10] Katy Moore: Good afternoon,
+Please could I confirm what the workflow should be when working with Veeva hosted documents in Takeda accounts?
+<https://app.intercom.com/a/inbox/o1w0qyxm/inbox/admin/5298352/conversation/12309200070254?view=List|Richard Coonan at Takeda UK Oncology> is asking when creating an email template with a vault document linked to it (one that has been manually uploaded to Veeva Vault, not created in Shaman), is it necessary to create two separate jobs for both the email template, and the vault document? Or one job can be used for both?
+I understand this is not necessarily Shaman related (more on the Veeva Promomats side) but would be good to know for our understanding.
+Many thanks
+  → Xavier Verbij: @Katy Moore, the hosted document should be approved in advance before this can be added to the email template. Which means that two jobs need to be created. One job in Veeva for the hosted document and one job, which can be made through Shaman, for the VAE.
+  → Katy Moore: OK thank you, I will let Richard know but perhaps if you have any upcoming meetings with him you can clarify this with him in person.
+
+--- CHUNK 40 (source: confluence, relevance: 0.65) ---
+Title: Shaman Organization Overview (part 2)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1894350849
+
+# Shaman Organization Overview
+
+Path: Admin Space
+
+d value (time to market, cost reduction, content reuse, personalization, agility). The platform is live; success depends on how it's used.
+Expansion
+— The natural result of successful value delivery. Includes geographic expansion, channel expansion, renewals, and upsells.
+This cycle informs how our teams collaborate across implementations and ongoing customer success.
+Shaman Teams
+Name
+Role
+Key Outcomes
+Commercial team
+Drive revenue growth through customer renewals and growth, and new customer acquisition, while maintaining strong executive relationships
+ARR growth, new logos, expansion revenue, renewals
+Customer Solutions
+Ensure customers achieve maximum value from Shaman through successful implementations, user adoption, and ongoing support
+User adoption, customer satisfaction, value delivery (time-to-market, cost, reuse)
+Product team
+Build and evolve the Shaman platform to enable pharmaceutical companies to successfully create the content their local customers need, while being agile, fast, compliant and on-brand.
+Platform capabilities, roadmap delivery, technical excellence
+Commercial Team
+Lead:
+Erik de Rooij (CCO)
+Total:
+5 FTE
+The Commercial team drives revenue growth, market presence, and customer acquisition.
+Name
+Role
+Erik de Rooij
+CCO / team lead
+Jillali Ajaba
+Sr Business Development / Account Lead
+Samo Badr
+Business Development / Account Lead
+Danylo Kovalenko
+Sales Development Representative (SDR)
+Maureen Moraleja
+Assistant
+Responsibilities:
+

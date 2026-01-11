@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+*.log
+
+# Data folders (not in git)
+knowledge_base/
+backups/
+content_input/
+
+# Runtime data files (created by slack_bot.py)
+feedback_log.json
+pending_suggestions.json
+questions_log.json
+
+# Analysis output files
+slack_analysis_*.json

@@ -1,0 +1,85 @@
+Slack Channel Analysis: #product-questions
+Date: 2025-12-20 11:19:10
+Messages analyzed: 38
+Time range: Last 30 days
+============================================================
+
+Based on my analysis of these Slack messages from the #product-questions channel, here are the key findings:
+
+## 1. Questions Asked
+
+**Technical Integration Issues:**
+- PDF text conversion problems in slide builder (Maryia)
+- Export to Vault process getting stuck in step 1 (Laurent)
+- MLR relationships disappearing after syncing email templates (Katy - asked twice)
+- Veeva user role assignment errors (Katy)
+- Login/authentication issues for demos (Xavier)
+
+**Configuration & Setup:**
+- How to set up Veeva entities for different subtypes (Katy)
+- Default values in Veeva fields setup (Katy)
+- Field ordering in slide details pages (Maryia)
+- MLR filtering by Therapeutic Area (Maryia)
+- VaultUploadNewVersion feature configuration (Katy)
+
+**API & Data Access:**
+- GraphQL user query not working (Katy)
+- User activity tracking and last login data (Xavier, Katy)
+
+## 2. Common Themes
+
+**Most frequent topics:**
+- **Veeva integration challenges** (5+ messages) - configuration, syncing, field setup
+- **User management and analytics** (3 messages) - login tracking, user lists, activity monitoring
+- **Technical bugs and system issues** (4 messages) - PDF conversion, export processes, preview failures
+
+## 3. Feature Requests
+
+**Specific Enhancement Requests:**
+- **Character limit alerts** for Shamango emails (Sophie) - to prevent truncation issues
+- **MLR filtering by Therapeutic Area** when fetching from Vault (Maryia)
+- **Slide names in heatmap overview** for CLM analytics (Xavier)
+- **Custom field filtering** for Vault images (Laurent) - "Is Sensitive Content" filter
+- **Support for non-standard Veeva relationships** (Katy) - supporting_document__c vs supporting_documents__vs
+- **Red boxing project** for US FDA compliance (Xavier)
+- **WhatsApp Business creative resizing** (1080x2160 pixels) for Takeda India
+
+## 4. Pain Points
+
+**Critical Blockers:**
+- **Demo access issues** - superadmin problems preventing client demos
+- **Litmus preview failures** - credits deducted but no previews generated
+- **MLR relationships disappearing** during sync cycles (Shionogi-specific)
+
+**Workflow Frustrations:**
+- **PDF text becomes images** in slide builder despite being selectable text
+- **Export processes hanging** requiring browser refresh
+- **Cannot set default values** for Veeva entities in UI
+- **Limited filtering options** for MLR documents
+- **GraphQL API changes** breaking existing queries
+
+## 5. Actionable Insights
+
+**High Priority (Fix Immediately):**
+1. **Investigate Litmus integration failure** - users losing credits without results
+2. **Fix Shionogi MLR relationship bug** - critical sync issue affecting client workflow
+3. **Resolve GraphQL API breaking changes** - restore user query functionality
+4. **Address PDF text-to-image conversion** in slide builder
+
+**Medium Priority (Next Sprint):**
+1. **Implement character limit warnings** for email templates (prevents Veeva truncation)
+2. **Add user last-login tracking** to analytics dashboard
+3. **Enable MLR filtering by Therapeutic Area** for multi-TA accounts
+4. **Support custom Veeva relationship types** for Almirall
+
+**Strategic Initiatives:**
+1. **Revive FDA red boxing project** - opportunity for US market expansion
+2. **WhatsApp Business integration** - emerging channel opportunity
+3. **Enhanced CLM analytics** - slide name visibility in heatmaps
+
+**Documentation Needs:**
+- Clear guidance on VaultUploadNewVersion configuration
+- PDF creation best practices for slide builder compatibility
+- Veeva entities setup workflows with examples
+
+The data shows a product team dealing with integration complexity, particularly around Veeva, while users are requesting both bug fixes and feature enhancements that would improve their daily workflows.

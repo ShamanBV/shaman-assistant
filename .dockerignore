@@ -1,0 +1,36 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local data (will use Railway volume instead)
+knowledge_base/
+
+# Environment files (set in Railway dashboard)
+.env
+.env.local
+
+# Backups (too large for container)
+*_backup.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

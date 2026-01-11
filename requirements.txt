@@ -1,0 +1,25 @@
+# MagicAnswer Dependencies
+
+# Core
+anthropic>=0.18.0
+python-dotenv>=1.0.0
+
+# Vector Store
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+
+# API Clients
+slack-sdk>=3.21.0
+requests>=2.31.0
+
+# HTML Processing
+beautifulsoup4>=4.12.0
+
+# PDF Processing
+pdfplumber>=0.10.0
+
+# Optional: YouTube transcripts
+# youtube-transcript-api>=0.6.0
+
+# Slack Bot
+slack-bolt>=1.18.0

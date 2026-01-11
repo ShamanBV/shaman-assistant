@@ -1,0 +1,14 @@
+[build]
+builder = "dockerfile"
+
+[deploy]
+startCommand = "python slack_bot.py"
+healthcheckPath = "/"
+healthcheckTimeout = 600
+restartPolicyType = "always"
+numReplicas = 1
+
+# Volume mount for ChromaDB persistence
+[[mounts]]
+source = "knowledge_base"
+destination = "/app/knowledge_base"

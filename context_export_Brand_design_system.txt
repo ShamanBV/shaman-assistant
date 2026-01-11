@@ -1,0 +1,1294 @@
+# Knowledge Base Context Export
+# Topic: Brand design system
+# Results: 40 chunks
+# Generated: 2026-01-11 11:34
+================================================================================
+
+Use this context to help write documentation or answer questions about this topic.
+
+================================================================================
+
+--- CHUNK 1 (source: confluence, relevance: 0.67) ---
+Title: Shaman builder descriptions (to share with CS/BD) (part 2)
+URL: https://shamanapp.atlassian.net/wiki/spaces/Product/pages/1862991874
+
+# Shaman builder descriptions (to share with CS/BD)
+
+Path: Product
+
+, using brand-approved templates or PDF import. Author banners by editing text and visuals within template lockings and apply mandatory text overlays with auto-scroll (e.g. ISI) to ensure compliance. Supports standalone banner MLR review in Veeva Vault PromoMats by automatically generating a review document that includes all banner states with overlays applied. After approval, export banner packages to publish in external banner networks.
+Shaman Landing Page Builder
+Design and localise single landing pages from brand-approved templates, images, blocks, brand design system and smart content cards. Includes translation, sharing of templates and global campaign pages from global to local, MagicCopy and Reference manager. Like other builders, Landing page builder has a content Hub to easily share pages global to local or local to local. Sync with Veeva Vault PromoMats for MLR review and approval. Export PDF and HTML.
+Shaman Smart Content Cards Builder
+Create and manage modular content blocks that are ready for use in Shaman Content Builders
+(Email and Landing Page, Slide is in development)
+. Smart Content Cards include text assets, visual assets, references and business rules similar to modular content. Next, they also include cite text, citation positions, footnotes, layout type and personalisation variants (e.g. persona, segment). Global brand content cards can be shared via the Content Cards Hub and translated or localised for markets.
+
+--- CHUNK 2 (source: slack, relevance: 0.66) ---
+Title: Untitled
+
+[2025-08-25] Maurice van Leeuwen: *PAGE 2*
+
+*What is Shaman?*
+• Pharma-focused content authoring platform
+• Self-service creation, less agency dependency
+• Can be used for Approved Email, Mass Email, Visuals, CLM, banners and landing page design 
+• Very easy to find and reuse global content
+• Integrated with Veeva Vault & CRM
+• Templates, Assets & modular content for consistency
+• AI tools for translation, copywriting, quality, compliance
+
+--- CHUNK 3 (source: confluence, relevance: 0.64) ---
+Title: Shaman Organization Overview (part 6)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1894350849
+
+# Shaman Organization Overview
+
+Path: Admin Space
+
+ementations
+Escalating technical issues to Product
+In-app communication and user provisioning
+Maintaining Shaman help center articles
+Content Design Team
+Team size:
+1.5 FTE
+Name
+Role
+Janaina Ferreira
+Content Lead (0.5 FTE, shared with Marketing)
+Camila Pedroso
+Content Designer (Freelance)
+Responsibilities:
+The Content Design team serves as
+Content Leads
+during customer engagements.
+Responsible for delivery of content systems: brand design systems (BDS), design templates & blocks, icons, images, and modular content
+Managing the design team to deliver specs, asset collection, progress tracking, and final QC
+Managing customer approval on content systems
+Providing planning, quick-scans, service point quotes, and checklists
+Supporting global campaigns and local design services
+Product Team
+Lead:
+Maurice van Leeuwen (CPO)
+The Product team is responsible for product strategy, roadmap execution, and ensuring we build the right solutions for our customers.
+Product Team
+Team size:
+4 FTE
+Name
+Role
+Maurice van Leeuwen
+CPO
+Filip Söderström
+Senior Product Manager
+Vladyslav Smirnov
+Product Manager
+Katy Moore
+ConfigOps
+Responsibilities:
+Defining product strategy and roadmap
+Gathering and prioritizing customer requirements
+Writing specifications, UI design and user stories
+Coordinating with engineering on sprint planning (Product Sync)
+Supporting (technical) demos and advising on new features
+Tech/ Product support on customer implementations
+Filip and Maurice can serve as
+Project Leads
+or
+
+--- CHUNK 4 (source: confluence, relevance: 0.64) ---
+Title: Shaman Organization Overview (part 2)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1894350849
+
+# Shaman Organization Overview
+
+Path: Admin Space
+
+d value (time to market, cost reduction, content reuse, personalization, agility). The platform is live; success depends on how it's used.
+Expansion
+— The natural result of successful value delivery. Includes geographic expansion, channel expansion, renewals, and upsells.
+This cycle informs how our teams collaborate across implementations and ongoing customer success.
+Shaman Teams
+Name
+Role
+Key Outcomes
+Commercial team
+Drive revenue growth through customer renewals and growth, and new customer acquisition, while maintaining strong executive relationships
+ARR growth, new logos, expansion revenue, renewals
+Customer Solutions
+Ensure customers achieve maximum value from Shaman through successful implementations, user adoption, and ongoing support
+User adoption, customer satisfaction, value delivery (time-to-market, cost, reuse)
+Product team
+Build and evolve the Shaman platform to enable pharmaceutical companies to successfully create the content their local customers need, while being agile, fast, compliant and on-brand.
+Platform capabilities, roadmap delivery, technical excellence
+Commercial Team
+Lead:
+Erik de Rooij (CCO)
+Total:
+5 FTE
+The Commercial team drives revenue growth, market presence, and customer acquisition.
+Name
+Role
+Erik de Rooij
+CCO / team lead
+Jillali Ajaba
+Sr Business Development / Account Lead
+Samo Badr
+Business Development / Account Lead
+Danylo Kovalenko
+Sales Development Representative (SDR)
+Maureen Moraleja
+Assistant
+Responsibilities:
+
+--- CHUNK 5 (source: confluence, relevance: 0.64) ---
+Title: Shaman Organization Overview (part 7)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1894350849
+
+# Shaman Organization Overview
+
+Path: Admin Space
+
+gineering on sprint planning (Product Sync)
+Supporting (technical) demos and advising on new features
+Tech/ Product support on customer implementations
+Filip and Maurice can serve as
+Project Leads
+or
+Tech Leads
+during customer implementations
+Maurice acts as the
+Privacy officer
+at Shaman
+ConfigOps:
+Managing platform configuration, BDS implementation, Quality Assistants, and operational configuration tasks
+Product Marketing
+Team size:
+0.5 FTE
+Lead:
+Janaina Ferreira (shared with Content Design)
+Responsibilities:
+Developing marketing/ brand strategy and campaigns
+Managing digital presence and content marketing
+Organizing webinars
+Creating sales enablement materials
+Technology Leadership
+Team size:
+1.75 FTE
+CTO:
+Oleksandr Knyga
+Name
+Role
+Oleksandr Knyga
+CTO (0.75 FTE)
+Dmytro Rozdobudko
+Assistant
+Responsibilities:
+Technical strategy and architecture decisions
+Engineering team leadership and mentorship
+Technology stack evaluation and decisions
+Infrastructure and scalability planning
+Engineering Team
+Lead:
+Oleksandr Knyga (CTO)
+HR Partner:
+??
+Our engineering teams build and maintain the Shaman platform. The teams are organized by product area to ensure deep domain expertise.
+
+--- CHUNK 6 (source: confluence, relevance: 0.63) ---
+Title: Veeva Entities Creation (part 3)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1572470785
+
+# Veeva Entities Creation
+
+Path: Admin Space
+
+will appear during entity creation processes.
+When configuring the Veeva Entity Type Builder Config, administrators can define:
+The source Entity Type that will serve as the foundation for the label
+The specific document type with which this label will be associated
+These settings determine how the entity will be presented and categorized within the Shaman interface.
+Step 4: Syncing Veeva Entity Type
+After completing both the Veeva Entity Type creation and Builder Config setup, proceed with system-wide deployment:
+Navigate to the "Veeva Entity Types" tab
+Access the actions menu from the navigation interface
+Select "Sync Veeva Entity Types to Companies" from the available options
+This synchronization process propagates the configured Entity Types and their associated labels across all registered company accounts. Upon completion, these Entity Types will be accessible within the Shaman user interface.
+
+--- CHUNK 7 (source: confluence, relevance: 0.63) ---
+Title: Shaman Organization Overview (part 10)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1894350849
+
+# Shaman Organization Overview
+
+Path: Admin Space
+
+van Klepinin
+BE Engineer
+Kateryna Vlasenko
+BE Engineer
+Maksym Yaremenko
+FE Engineer
+Bohdan Maltsev
+Lead QA
+Iryna Solodukhina
+QA Engineer
+Andrii Iliashenko
+QA Engineer
+Responsibilities:
+Visual Builder
+- Graphic design, static, animated and HTML banner
+Slide Builder
+- Slide authoring based on templates, PDF import or hub sharing
+Landing Page Builder
+- Web page authoring
+Smart Content Cards
+- Dynamic content components
+Audience Cards -
+Increase personalisation with Audience cards
+Reference Manager
+- Managing references and citations in content
+Example projects
+HTML Banner Builder — Digital advertising banner creation
+Integration reference manager with PubMed
+HTML banners, including PDF generation
+Compliance assistant - Quality checks
+Shaman Theming - Customers can enable their own Shaman skin (colors, logo)
+Redesign of the entire Shaman platform to Ant v4 and later Ant v5
+AI Team
+Team size:
+5 engineers, 1.5 QA
+Focus:
+Artificial intelligence and compliance automation
+Name
+Role
+Kamil Salimli
+Lead
+Sergey Legotin
+Engineer
+Vladyslav Smakula
+Engineer
+Sergei Guliaev
+Engineer
+Dmytro Larin
+Engineer
+Oksana Fedoryshyna
+QA Engineer
+Ilya Ivanishin
+QA Engineer (0.5 FTE)
+Responsibilities:
+All AI (Magic) implementations
+Integrated, like translate, MagicSearch
+Aurora - AI-powered content assistant
+MLR compare - Document comparison for MLR review
+Example projects:
+MagicSearch — Intelligent content and asset search, eg in the Visual Library
+
+--- CHUNK 8 (source: confluence, relevance: 0.62) ---
+Title: Set-up brand design system (ConfigOps copy) (part 13)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1594753025
+
+# Set-up brand design system (ConfigOps copy)
+
+Path: Admin Space > Config & Ops > Superadmin - Account settings > Email Settings
+
+tes
+Similarly to brand images, we can share Global design templates (Templates, fragments & insertable blocks) from a Hub management account to all Participant accounts within the same company group. The same policy applies here that once a Design Template has been put to Live status, it will be shared and made available in all participant accounts (Also marked with a “Global” tag)
+There is a recurring sync running every 30 minutes that refreshes the Hub and shares any new content put to live from the Management to the Participant account.
+NB: Participant accounts can not edit or delete Global Design Templates. They can however make a local duplicate which can be tailored to their needs.
+
+--- CHUNK 9 (source: confluence, relevance: 0.62) ---
+Title: Settings
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1474396161
+
+# Settings
+
+Path: Admin Space > Config & Ops > Superadmin - Account settings > General
+
+Resources - General - Settings
+(Account) ID
+: Non-editable
+Email preview generations credits
+: How many credits are available in Inbox Preview. Can be updated by clicking edit icon and entering new value of credits
+Measurement system
+: Non-editable
+Veeva Vault Information
+Vault entry location:
+Country:
+Vault upload new version config:
+Veeva images synchronization config
+Document type:
+Document type API field name
+Document subtype
+Document classification
+Document classification API field name
+Allowed lifecycle states: eg. Approved, Approved for Use
+Define IntegrationUser Veeva Role:
+Veeva Image Relationship Type
+Grace Period Expired Content
+ShamanGo Naming Fields
+Enable naming settings:
+Duplicate slide name:
+Product dependent naming:
+Separator in name:
+Separator in description:
+Export package
+Password Requirements Renew Days 365
+Vault Integration User Key: shaman-vault-key-sbx
+Vault Client Name Format: shaman-(clientname)-vaultpromomats-client-shamango
+Add on top, before <doctype> tag:
+Add before BODY tag
+Add after BODY tag
+Add end of HTML table
+Default preheader text
+Email settings
+DH settings
+Account code:
+Admin User Name:
+User Name:
+User Code:
+
+--- CHUNK 10 (source: confluence, relevance: 0.62) ---
+Title: Email Brand Design System (part 1)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/801406995
+
+# Email Brand Design System
+
+Path: Admin Space > Approved Email Builder
+
+Design system elements
+Email Brand Design System in Shaman consists of the following items:
+Brand color and fonts
+Brand email policies
+Brand Image library
+Brand Design Templates
+For email template
+For email fragment
+For email blocks
+Modular content
+Duplicate complete email documents
+General concepts
+Brand design system is set per account
+Brand design system depends on selected brand
+If items need to be available for all brands (eg general enterprise brand, no brand)
+Brand colors and fonts: brand > customize = false (you will see default colors and fonts)
+Design templates: ‘not brand related’
+Images: add image to design template that is ‘not brand related’
+All brand design system elements can be duplicated between accounts
+Brand colors, fonts and policies in superadmin
+Modular content relies on Veeva Vault as single source
+Using ShamanHub (accounts in account group)
+Images and Design templates from management account to child accounts
+Duplicate email documents (template and fragment) using ShamanHub
+Content considerations
+Background images can be a nice way to make an email pop, but it's important to make sure it is set up in the best way possible to ensure good results throughout.
+Background images are supported in most email clients, with the exception of Windows 11 Mail and Office 365 browser versions. This is according to tests carried out internally, 25/9.
+
+--- CHUNK 11 (source: slack, relevance: 0.61) ---
+Title: Untitled
+
+[2025-03-12] Maryia Parovaya: Hi @Erik de Rooij@Maurice van Leeuwen, Novartis DE created a design system for MTEs and are asking for assistance with recreating it in Shaman. Could you, please, advise on the costs and timelines? I know we have content design services packages, but I am not sure which one shall be applied in this case
+<https://www.figma.com/design/PamWtuPexnDgvrfcrrPI18/GER_Email_Use-Cases-2024?node-id=71-3330&amp;t=PmyfCMkFmgP4g5yG-1>
+PW: MRT2025
+
+--- CHUNK 12 (source: pdf, relevance: 0.61) ---
+Title: Untitled
+
+# Shaman & Veeva Vault Integration Guide v4.pdf
+
+Shaman & Veeva Vault
+Integration Guide
+A practical guide for Veeva Vault teams supporting the Shaman Content
+Authoring <> Veeva Vault PromoMats (VVPM) integration.
+Version: 4 Last update: Jul 16, 2025
+Page 1/22
+
+Contents
+Shaman & Veeva Vault Integration Guide 1
+1. Why Shaman Content Authoring 3
+1.1 Introduction and the Shaman Approach 3
+1.2 Content Authoring Solution in the Content Value Chain 4
+1.3 Veeva Silver Product Partner 4
+2. Shaman and Veeva Vault PromoMats 5
+2.1 Authoring in Shaman, Managing in Vault 5
+2.2 Content Review and Approval 5
+2.3 Content Publishing 6
+2.4 Document Lifecycle Tracking and Permissions 6
+3. End-to-End Content workflow 7
+3.1 Your SOP/ End user Guide for Veeva Vault PromoMats 7
+4. Points of integration 8
+4.1 Create and Update Documents in Vault 9
+4.2 Create/Update Multichannel Content 9
+4.3 Component Retrieval and Linking 10
+4.4 Document Access 10
+4.5 Object Access 10
+4.6 Lifecycle Sync 11
+5. Method of Integration 11
+5.1 Integration User Setup 11
+5.2 Minimum Permission Requirements 12
+6. Document access 12
+Document Access 12
+Document Create and Update 13
+6.1 Document Sharing Settings 13
+6.2 Example Permissions Matrix for Shaman Integration User 13
+7. Configuring the Shaman accounts 15
+7.1 Required Document Fields Mapping 15
+7.2 Dynamic Object Integration 15
+7.3 Naming Convention Support 15
+7.4 Ongoing Admin Support 16
+8. Veeva Tokens 16
+9. Navigating Between VVPM and Shaman 17
+9.1 Configure the VVPM webaction “Open in Shaman” 17
+10 Appendix 18
+10.1 Lifecycle: Material/Promotional (Sample) 18
+10.2 Configuration Examples for Shaman Integration User by feature set 19
+Page 2/22
+
+--- CHUNK 13 (source: confluence, relevance: 0.61) ---
+Title: Veeva Promomats Integration (part 1)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1291485185
+
+# Veeva Promomats Integration
+
+Path: Admin Space
+
+Overview
+This page provides an overview of our integration with Veeva Promomats, detailing the permissions required for API Integration and testing checklist.
+Required permissions summary
+For API integration, Shaman only needs a basic VVPM Agency User with the following access:
+Binders
+Ability to create, view, and edit binders (Multichannel Presentations)
+Slides
+Ability to create, view, and edit slides.
+Email Templates
+Ability to create, view, and edit email templates.
+Email Fragments
+Ability to create, view, and edit email fragments.
+Template Fragments
+Ability to create, view, and edit template fragments.
+Materials (or other document types used for MLR)
+Ability to create, view, and edit materials required for MLR compliance.
+The integration user should not rely on SSO, as the VVPM API requires authentication with a username and password.
+Customer Checklist
+Ensure that the Integration has full versioning access to be able to update documents once they are created. Use the below guidance to double-check versioning access.
+https://app.tango.us/app/embed/Checking-Versioning-Access-Admin-Settings-673a811db09d406a81d7e145de59a472
+Content sourced from Shaman should be accessible to the appropriate VVPM users who will manage document stage transitions and that versioning is not restricted solely to the Owner.
+Shaman Testing Checklist
+Please find below the checklist for testing scenarios that need to be completed for each account.
+
+--- CHUNK 14 (source: confluence, relevance: 0.60) ---
+Title: Sprint 24-09 (21/5) (part 2)
+URL: https://shamanapp.atlassian.net/wiki/spaces/Product/pages/1093992449
+
+# Sprint 24-09 (21/5)
+
+Path: Product > Roadmap notes
+
+designs and update us
+Action items:
+67
+incomplete
+to set up and prepare grooming session Mon 29 to discuss addElements ideas (blocks, modules)
+338
+incomplete
+to check policies with Security team
+339
+incomplete
+to research resizing options
+Global team.
+Recap:
+We currently face some delays in Shaman Hub for CLM
+We need to further investigate mapping expiry dates and link to Veeva status in Hub
+Niazz is working on Veeva
+documentation
+. We need to discuss which level of documentation is needed
+Action items:
+68
+incomplete
+create spec for ‘Based on’ document field
+340
+incomplete
+create spec for user analytics
+341
+incomplete
+create spec for Slide Hub
+342
+incomplete
+create spec for Hub data collection
+343
+incomplete
+create spec on keeping Hub documents in sync with Veeva
+344
+incomplete
+review documentation requirements Veeva certification
+EOS team.
+Recap:
+Need more development for QR code block to generate PNG rather than SVG
+Due to unlayer limitation of 5 tools and 10 blocks, we will be moving ‘block-lilke’ tools to blocks.
+
+--- CHUNK 15 (source: confluence, relevance: 0.60) ---
+Title: Shaman Organization Overview (part 1)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1894350849
+
+# Shaman Organization Overview
+
+Path: Admin Space
+
+Welcome to the Shaman team page. This document provides an overview of our organizational structure and the responsibilities of each team.
+Management Team
+Name
+Role
+Maurice van Leeuwen
+CEO, CPO (Chief Product Officer)
+Erik de Rooij
+CCO (Chief Commercial Officer)
+AJ van Creveld
+CCSO (Chief Customer Solutions Officer)
+Oleksandr Knyga
+CTO (Chief Technology Officer)
+How We Work: Customer Engagement Cycle
+Our customer facing teams organize around a continuous customer engagement cycle with three key phases:
+Solution Implementation
+— Implementing sold solutions to achieve user success. Includes initial onboarding, market expansion, Hub/content reuse, MLR workflow improvements, channel expansion, and AI features.
+User Success & Value Delivery
+— Driving user adoption and delivering defined value (time to market, cost reduction, content reuse, personalization, agility). The platform is live; success depends on how it's used.
+Expansion
+— The natural result of successful value delivery.
+
+--- CHUNK 16 (source: pdf, relevance: 0.60) ---
+Title: Untitled
+
+# Shaman & Veeva Vault Integration Guide v4.pdf (part 3)
+
+nes
+software, services, and consultancy. We invest heavily in onboarding and adoption,
+working closely with your teams to align our platform with your organizational needs
+and regulatory requirements. A key part of onboarding is a deep integration with Veeva
+Vault PromoMats, which ensures:
+● Existing SOPs and workflows remain intact
+● Vault continues to be the single source of truth
+● Roles, permissions, and document lifecycles are respected and aligned
+Shaman is proud to be a certified Veeva Silver Product Partner, and this guide outlines
+how we work together to optimize your end-to-end content production process.
+Page 3/22
+
+1.2 Content Authoring Solution in the Content Value Chain
+The life sciences content value chain typically involves multiple stages supported by
+different platforms (orange: VVPM, green: Shaman):
+Shaman focuses on automating and augmenting the content creation and production
+stages — some of the most manual and time-consuming parts of the chain.
+Key benefits/ Why Content Authoring matters
+Shaman’s authoring capabilities are designed to address several content
+challenges across global and local teams:
+✅
+Accelerate timelines: Faster creation and MLR readiness
+💰
+Lower costs: Eliminate repetitive agency work
+📏
+Improve control: Templates and checks enforce brand, legal, and scientific
+consistency
+🔄
+Drive reuse: Enable global-to-local and local-to-local content reuse
+✍
+Empower teams: Local markets can safely create and adapt content via
+self-service
+🌍
+Enable personalization at scale: easily make variants, update content or
+repurpose to other channels
+🔗
+Ensure seamless MLR handover: Content reuse, modular content and pre
+MLR-checks translate into predictable MLR input
+1.3 Veeva Silver Product Partner
+Shaman is a Certified Veeva Silver Product Partner, which means our integration is
+built on validated API connections, follows Veeva development best practices, and is
+supported by up-to-date product documentation and production customer references.
+
+--- CHUNK 17 (source: confluence, relevance: 0.59) ---
+Title: Marketing Email Builder (part 2)
+URL: https://shamanapp.atlassian.net/wiki/spaces/Product/pages/926220295
+
+# Marketing Email Builder
+
+Path: Product
+
+CRM attributes what dynamic content block will be included in the email)
+Export html ready for Salesforce Marketing Cloud, including AMPscript and instructions for the internal marketing cloud team. Html export can be used 1-on-1 in Salesforce marketing cloud without the need for further adjustments
+Ensure brand consistency during design step with brand design system, access to the global image library, modular content and design templates
+This will allow teams to:
+Optimize the use of mass email, easily create more emails and variants for marketing cloud
+Easily create Marketing Cloud content from existing Veeva Approved Email
+Easily manage the content production process, including a Test step (Litmus integrated) and MLR step (integration with Veeva Vault Promomats)
+Reuse your design system, templates and images for marketing cloud emails
+Easily share, duplicate and localise email content across markets
+Why should you consider using Shaman Marketing Email Builder?
+To make effective use of Marketing Cloud personalisation, content teams will need to create many pieces of dynamic content and supporting logic
+To ensure successful roll-out of marketing email, we believe the focus should be on empowering content teams to create relevant content in the easiest way possible
+Shaman guides content teams through all the steps of Marketing Cloud Email content creation, in a single place
+
+--- CHUNK 18 (source: features, relevance: 0.59) ---
+Title: Feature 119
+
+# Feature 119
+
+Feature Name: Feature 119
+
+The VeevaImages feature is a Shared builder capability that enables pharmaceutical marketers and content administrators to seamlessly access and incorporate approved brand and country-specific images directly from their client's Veeva Vault Digital Asset Management system into Shaman content authoring workflows. This integration requires additional configuration setup and allows marketing teams to maintain brand compliance by pulling pre-approved visual assets, product images, and promotional materials that have already gone through the medical, legal, and regulatory review process within Veeva Vault. Content creators and field teams can confidently use these vetted images in their Closed Loop Marketing presentations, Approved Email campaigns, and other promotional materials without concerns about regulatory compliance or brand guideline violations. The feature streamlines the asset management process by eliminating the need to manually download, store, and track approved images separately, while ensuring that only current, compliant visual content is available for use in pharmaceutical marketing communications and sales enablement materials.
+
+Details:
+- Feature name in Superadmin: VeevaImages
+- Builder: Shared
+- Deprecated: No
+- Feature Description: Provides access to approved brand/country images from client Veeva Vault (Requires additional configuration)
+- Default (When customer has the builder)
+/premium: Default customer
+- AI: No
+
+
+This feature is called Feature 119.
+
+--- CHUNK 19 (source: confluence, relevance: 0.59) ---
+Title: Slide Builder Global Templates (part 5)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1287782401
+
+# Slide Builder Global Templates
+
+Path: Admin Space > Slide Builder
+
+ocal involvement in-house or outsourced
+Realistic timelines
+Dependency and risk assessment + mitigations (eg: agency user backup)
+Project can be initiated as a pilot to demonstrate the business case. Typically this will involve 1 brand and 2-3 local markets.
+Step: Intake
+Step
+Responsible
+Considerations
+Detailled Intake report
+CSM
+Identify markets to include in first wave
+Get local buy-in
+Discuss same topics on local level
+Local capacity in-house or outsourced
+MLR requirements
+Timelines and other local requirements
+Dependency and risk assessment + mitigations (eg: agency user backup)
+Artwork CSM intake / considerations
+CSM
+Size (# of pages)
+Which ones are needed for template?
+Divide content into chapters
+How are references managed
+Access to fonts
+Access to source files
+Locking requirements
+Elements in design that link to interactions (eg interaction elements)
+Content check Product/Design Services
+Product + Design Services
+Quality of PDF artwork
+Complexity of the artwork and interactions
+Estimate of time to create templates
+Planning
+CSM
+Plan project with Design Services
+Plan intake dates with markets
+Focus on 2-3 markets to start with
+Deliver week planning
+Dependencies
+Next step can only be planned after we received and tested artwork
+Step: Prepare
+Step
+Responsible
+Considerations
+Content preparation: Slide templates by Design services
+Design Services + CSM
+Start project with Design services and reconfirm timelines
+Determine customer account to do UAT
+
+--- CHUNK 20 (source: helpcenter, relevance: 0.59) ---
+Title: Welcome to Shaman
+URL: https://help.shamancloud.com/en/articles/5535412-welcome-to-shaman
+
+# Welcome to Shaman
+
+Shaman
+Shaman is a leading sales content platform for the life science industry. We wanted to build a sales-enablement tool that helps marketing and sales teams to engage HCPs more easily and effectively.
+Time-constrained HCPs
+At Shaman, we understand the difficulties that marketers and their sales forces in the life science industries face when it comes to capturing the attention of today’s time-constrained customers and building relationships.
+Sales Engagement
+That’s why we designed a sales content platform that goes beyond traditional Closed Loop Marketing tools. We focus on helping marketing and sales teams to engage HCPs more effectively, no matter how limited their time.
+Say hello to the future of medical communications.
+Dutch-based Saas company Shaman offers pharma marketers an easy-to-use way to create structured but flexible visual aids. The ShamanHealth content platform offers many different features to improve your HCP engagement. The platform is already enjoyed by sales reps, marketers, and medical managers at 50+ life-science companies around the world.
+
+--- CHUNK 21 (source: confluence, relevance: 0.59) ---
+Title: MLR Documents | Emails (part 1)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1139048489
+
+# MLR Documents | Emails
+
+Path: Admin Space > Approved Email Builder
+
+Overview
+MLR reviews are a key practice in pharmaceutical marketing, ensuring that marketing and promotional materials comply with regulatory standards. The MLR process usually begins after the client approves the marketing creative work. A team of legal, medical, and regulatory experts carefully reviews each marketing component, assessing the accuracy of medical information, adherence to legal requirements, and compliance with ethical marketing practices.
+Although the MLR process may vary slightly among pharmaceutical companies, the primary goal remains the same.
+Key Functions
+: In Shaman, you can create an MLR document either by exporting the current design directly to the vault from ShamanGo or by uploading a PDF. Additionally, you can retrieve MLR documents from PromoMats and attach them to the email during the Export step.
+Commercial
+Paid feature
+: YES
+:heavy_dollar_sign:
+1f4b2
+💲
+#EAE6FF
+The MLR feature for Email is part of the Email Plus Package
+How to enable
+Feature
+IsActive
+MlrCreationForEmailDocument
+YES
+MlrDocuments
+YES
+The
+MlrDocuments
+feature was previously limited to linking Emails or Presentations to existing MLR Documents within the VVPM.
+
+--- CHUNK 22 (source: confluence, relevance: 0.59) ---
+Title: How to setup brands for DesignHuddle (part 1)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1180794881
+
+# How to setup brands for DesignHuddle
+
+Path: Admin Space > Design Huddle
+
+If a Shaman account has the Slide Builder, Visual Builder or ModCon Builder enabled, we need to connect the brands in the Shaman account to a brand in Designhuddle.
+If you do not setup a Designhuddle brandID, the brand will not show up in the UI picklist when user wants to create a Slide Project or Visual Component.
+Also make sure to set-up Designhuddle credentials in the account to enable authentication.
+Background
+For the time being (expected to change end 2024) we will manage brand design system from the Design Huddle platform, including colors and fonts. Image library is expected to be moved around Oct. Especially fonts is important: if the font is not installed, the user will not be able to make edits using the original font (Import from PDF, as PDF files do not include fonts).
+What happens/ User experience
+Fix fonts error message
+The user uploads a PDF, which is then covered in DesignHuddle to a Project. DesignHuddle will check if the font is already installed (matched on exact same name). If not, it will show an alert ‘Fix fonts’.
+Fix fonts actions
+User clicks the button which will open the unmapped fonts found. User can then:
+Select correct or other font from list
+Upload new font
+All new fonts installed while using this brand will be stored in brand level and can be reused for other Projects with the same brand.
+How do we deal with fonts?
+We expect the majority of projects on between 2- 5 brands per account. In total we estimate 5-15 brands per customer.
+
+--- CHUNK 23 (source: pdf, relevance: 0.59) ---
+Title: Untitled
+
+# Shaman & Veeva Vault Integration Guide v4.pdf (part 5)
+
+ntent Review and Approval
+Once content is created in Veeva Vault as material, content owners can initiate and
+manage the Medical, Legal, and Regulatory (MLR) review process in VVPM as usual.
+Page 5/22
+
+2.3 Content Publishing
+Upon MLR approval in VVPM, Shaman can auto-generate final HTML output ready for
+publishing.
+Publishing workflow depends on content type:
+● For Detail Aids (CLM) and Approved Email: Users auto-generate HTML content in
+Shaman and sync it into Veeva Vault PromoMats as Email Templates, Email
+Fragments, Template Fragments, or Multichannel Presentation with
+Multichannel Slides. Metadata can be configured directly in Shaman or inherited
+from the source Material document. Depending on your SOP, documents can be
+automatically linked (e.g., to approved reference documents) during the sync
+process.
+● For other content channels/ platforms (eg marketing email, web): Users
+auto-generate HTML content in Shaman to download for other platforms.
+NB 1: Content is locked from export until it reaches the appropriate approved state in Vault. This
+ensures regulatory alignment and reduces the risk of premature distribution.
+NB 2: Shaman is not a publishing platform.
+2.4 Document Lifecycle Tracking and Permissions
+Once synced to Vault, content in Shaman is linked to the Veeva Document ID. This
+enables Shaman to:
+● Track the document’s lifecycle state in real time
+● Control what actions users can perform based on lifecycle stage (e.g., restrict
+editing of content in review, restrict export of non approved content)
+● Support version-specific logic for editability, exportability, and compliance
+checks
+This tight integration ensures that content remains consistent across systems, aligns
+with your SOPs, and respects Vault governance protocols — while unlocking a more
+efficient and user-friendly content creation process.
+Page 6/22
+
+--- CHUNK 24 (source: features, relevance: 0.59) ---
+Title: Feature 74
+
+# Feature 74
+
+Feature Name: Feature 74
+
+The SlideBuilderTemplates feature (now deprecated) enabled content administrators and marketing teams to create reusable slide templates directly within Shaman's Slide Builder interface for Veeva Closed Loop Marketing (CLM) presentations. This functionality allowed pharma marketing teams to establish standardized template designs that could be consistently applied across multiple presentation slides, ensuring brand compliance and visual consistency in sales materials. Content creators and digital asset managers would typically use this feature to build template libraries that field representatives could then leverage when customizing presentations for different healthcare provider audiences or therapeutic areas. The feature integrated with Veeva Vault PromoMats for content approval workflows and supported the creation of branded slide layouts, placeholder content structures, and standardized design elements that could be deployed across various CLM presentations and marketing materials within the Veeva commercial ecosystem.
+
+Details:
+- Feature name in Superadmin: SlideBuilderTemplates
+- Deprecated: Yes
+- Feature Description: Enables Slide Template creation within Slide Builder
+
+
+This feature is called Feature 74.
+
+--- CHUNK 25 (source: features, relevance: 0.58) ---
+Title: Feature 31
+
+# Feature 31
+
+Feature Name: Feature 31
+
+The VeevaVault feature provides comprehensive integration capabilities between Shaman's pharma content authoring platform and Veeva Vault, enabling seamless content management workflows across both systems. This shared builder feature allows pharmaceutical marketing teams, medical affairs professionals, and content administrators to synchronize documents, maintain version control, and streamline content approval processes between Shaman and their Veeva Vault document management system. Users can leverage this integration to automatically transfer approved content like Closed Loop Marketing (CLM) presentations, Approved Email (AE) templates, and medical information materials from Shaman's authoring environment directly into Veeva Vault repositories. The feature supports common pharmaceutical content workflows including document lifecycle management, regulatory submission preparation, and multi-channel content distribution while maintaining compliance with industry standards. Organizations using Veeva CRM, Veeva Vault PromoMats, or other Veeva applications will find this integration essential for creating unified content management processes that span from initial authoring through final distribution to field teams.
+
+Details:
+- Feature name in Superadmin: VeevaVault
+- Builder: Shared
+- Deprecated: No
+- Feature Description: Enables comprehensive Veeva Vault integration capabilities
+- Default (When customer has the builder)
+/premium: Default system
+- AI: No
+
+
+This feature is called Feature 31.
+
+--- CHUNK 26 (source: pdf, relevance: 0.58) ---
+Title: Untitled
+
+# Shaman & Veeva Vault Integration Guide v4.pdf (part 2)
+
+9.1 Configure the VVPM webaction “Open in Shaman” 17
+10 Appendix 18
+10.1 Lifecycle: Material/Promotional (Sample) 18
+10.2 Configuration Examples for Shaman Integration User by feature set 19
+Page 2/22
+
+1. Why Shaman Content Authoring
+1.1 Introduction and the Shaman Approach
+Shaman is your partner on the journey to content excellence. In today’s life sciences
+landscape, content is a critical enabler — powering commercial success across field
+teams and omnichannel marketing. Next it fuels sales force effectiveness,
+segmentation strategies, and next-best action recommendations. All these depend on
+producing the right content, at the right time.
+Veeva Vault PromoMats plays a central role in this content ecosystem, acting as the
+system of record for compliant content management. Shaman complements this by
+addressing a major upstream challenge: how content is created. As a self-service
+content authoring platform, Shaman provides a scalable, structured, and predictable
+way to allow local brand teams to generate high-quality content, ready for MLR review.
+By integrating seamlessly with Veeva Vault, Shaman Content Authoring:
+● Empowers content creators to work faster and more autonomously
+● Significantly reduces content production costs and timelines
+● Enables greater reuse and consistency of messaging across brands, markets,
+and channels
+● Drives adoption by embedding into existing governance frameworks (SOPs,
+permissions, lifecycles)
+While Shaman is a SaaS platform, our approach goes beyond technology — it combines
+software, services, and consultancy. We invest heavily in onboarding and adoption,
+working closely with your teams to align our platform with your organizational needs
+and regulatory requirements.
+
+--- CHUNK 27 (source: confluence, relevance: 0.58) ---
+Title: Account onboarding (existing customer)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/874348553
+
+# Account onboarding (existing customer)
+
+Path: Admin Space > Config & Ops
+
+Account intake
+Veeva objects (brands, crm products, languages, country)
+List of users
+Local key messages
+Workflow
+Planning of onboarding
+Email footer
+Steps
+Set-up account
+Duplicate account (in case of large customer specific account to duplicate)
+Add account to Account Group
+Add integration user/ Vault API end point
+Add tags in Intercom
+Features
+Configuration Veeva objects
+Brands
+Countries (inc CRM orgs)
+CRM products
+Languages
+Configuration Veeva Labels
+Email Template, Fragment, Template Fragment
+CLM Presentations
+MLR and RP
+Slide details
+Naming convention
+Key messages
+Categories
+Approved Email Tokens / Marketing Email Tokens
+Brand Design system
+Colors
+Fonts
+Email policies
+Users
+Add BO user
+Add users/ roles before training session
+Create email design template block: footer
+Based on approved global design
+Address information
+Copyrights
+Disclaimer
+Adverse events
+Confidentiality note
+MLR info
+Links (privacy policy, disclaimer, PI, unsubscribe)
+
+--- CHUNK 28 (source: features, relevance: 0.57) ---
+Title: Feature 112
+
+# Feature 112
+
+Feature Name: Feature 112
+
+The VisualBanner feature in Shaman's Visual Builder enables pharmaceutical marketing teams and content creators to develop custom HTML banner components for their Veeva Closed Loop Marketing (CLM) presentations and promotional materials. This paid system feature allows users to create visually engaging banner elements that can be embedded within Veeva CRM presentations, helping pharmaceutical sales representatives deliver more compelling product messaging during healthcare provider interactions. Marketing teams typically use VisualBanner to design branded headers, promotional callouts, and interactive visual elements that enhance the overall presentation experience while maintaining compliance with pharmaceutical regulations. The feature integrates seamlessly with Shaman's content authoring workflow, allowing created visual components to be deployed directly to Veeva systems for field team access. Content managers and digital marketing specialists often leverage this functionality when building comprehensive CLM slide decks, email templates, or other promotional content that requires custom visual branding beyond standard text and image layouts.
+
+Details:
+- Feature name in Superadmin: VisualBanner
+- Builder: Visual
+- Deprecated: No
+- Feature Description: Enables possibility to create Visual Componenets (HTML banners)
+- Default (When customer has the builder)
+/premium: Paid system
+- AI: No
+
+
+This feature is called Feature 112.
+
+--- CHUNK 29 (source: confluence, relevance: 0.57) ---
+Title: Slide Builder (part 2)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1125974017
+
+# Slide Builder
+
+Path: Admin Space
+
+feature.
+Customization
+: Describe any customization options available.
+Slide Builder operates independently of Veeva Vault Labels, eliminating the need for modifications to existing label structures. This is due to the following workflow:
+Slide Creation: Slides generated using Slide Builder are exported to the internal Shaman system.
+Availability: These slides are accessible exclusively during the creation of CLM Presentations.
+Export Limitations: It's important to note that these slides are not exported to the client's Veeva Vault Promo Mats (VVPM). Only as part of CLM Presentation these slides are exported to VVPM as Multichannel Slides.
+Primary configurations are established during slide creation and within the General Panel of the Overview tab.
+Please be advised that slides created for a particular brand are exclusively available for use in CLM Presentations associated with the same brand
+Companies have the capability to establish brand-specific typography and color palettes for use within DesignHuddle's Slide Builder.
+
+--- CHUNK 30 (source: manual, relevance: 0.57) ---
+Title: Shaman Context: 1. What Shaman Is (Core Definition)
+
+## 1. What Shaman Is (Core Definition)
+
+Shaman is a content authoring platform for the pharmaceutical industry, designed to create, localize, manage, and update approved multichannel marketing and medical content.
+
+Shaman is a **guided self-service authoring platform** for end users such as brand marketers and digital managers, instead of agency designers and developers. This makes local pharma teams more agile, flexible, faster and it saves budget.
+
+### What does guided self-service mean?
+
+- **Author content** in a self-service capability
+- **Offer a structured, simplified process** for authoring between reusable components and Veeva PromoMats for review and approval that is easy for end users to understand
+- **Automates and simplifies steps** by integrating with Veeva, respecting MLR status from Veeva in Shaman
+
+**Guided** means we add additional guardrails for content authoring:
+
+| Phase | Guardrails |
+|-------|------------|
+| Pre-authoring | Provide design templates, possibly with locked elements |
+| Authoring | Respect brand design system, limit brand colors, fonts, images, styling of buttons etc, add content cards, manage references |
+| Post-authoring | Shaman compliance assistants check Quality of content, Language and compare against previous approved content (MLR compare) |
+
+Key capabilities:
+- Reuse approved components across channels
+- Maintain traceability between content, references, and approvals
+- Export content compliantly to execution systems (Veeva CRM, SFMC, web, etc.)
+
+### Veeva Vault PromoMats Integration
+
+Shaman is deeply integrated with Veeva Vault PromoMats for:
+- MLR (Medical, Legal, Regulatory) review and approval
+- Version alignment between authoring and approved assets
+- Export of approved content for downstream activation
+- Import of Components (images), Claims, references and modular content during authoring
+
+---
+
+
+--- CHUNK 31 (source: confluence, relevance: 0.56) ---
+Title: Email Style Guide Enforcement (part 1)
+URL: https://shamanapp.atlassian.net/wiki/spaces/~7120205377cd6ab0774fdf9cb1b725ba8cf14c/pages/1764720641
+
+# Email Style Guide Enforcement
+
+Path: Overview > Product requirements
+
+Product overview
+Target date
+Type /date to add a target release date
+Document status
+DRAFT
+Team members
+Type @ name to mention teammates
+Quick links
+Designs
+Add Figma links here
+Loom demo
+Add Loom links here
+Work tracker
+Add Jira work item links or other relevant project links here
+Background & Problem (The "Why")
+Our target users (Brand Managers in Pharma) face significant challenges with brand compliance and the rigorous Medical, Legal, and Regulatory (MLR) review process. A primary source of MLR rejections is inconsistent or non-compliant visual styling in marketing emails—such as incorrect font sizes for disclaimers, unapproved colors, or off-brand button styles.
+These rejections are costly, slow down the time-to-market for critical sales and marketing content, and create friction for Content Creators who are just trying to do their jobs.
+
+--- CHUNK 32 (source: confluence, relevance: 0.56) ---
+Title: FC: Style Guide (part 2)
+URL: https://shamanapp.atlassian.net/wiki/spaces/Product/pages/1780776961
+
+# FC: Style Guide
+
+Path: Product > Feature cards
+
+the time spent on manual styling and design.
+🚫 High Risk of Human Error & Non-Compliance:
+The system minimizes the risk of human error by allowing product admins to
+lock specific element properties
+. This ensures users can only utilize styles that meet strict brand and legal standards, which is vital for pharma compliance.
+🎨 Limited Style Options (Controlled Variety):
+It enables the creation of multiple brand-compliant style options for the same element (e.g., a "Primary Button" and a "Secondary Button"), enriching the content creator's ability to produce compliant, yet tailored, content.
+Monetization & Go-to-Market Strategy
+Feature overview
+Functionality
+Description
+Preconfigured Styles
+Define different, approved styles for virtually any element in the builder: Text, Heading, Button, Image, Columns, Rows, etc.
+Flexible Property Control
+Use the
+Lock/Unlock
+function on individual element property editors (e.g., lock the font size but allow color changes). This gives you granular control over what an end-user can modify.
+Builder Separation
+Styles can be configured and applied
+separately
+for the Email Builder and the Landing Page Builder.
+Default Style Application
+A
+Default Style
+can be set for any tool. When a user adds that element to the layout, the default, compliant style is automatically applied.
+Customizable Style Properties
+Configure only the
+required
+properties for a style.
+
+--- CHUNK 33 (source: confluence, relevance: 0.56) ---
+Title: Shaman builder descriptions (to share with CS/BD) (part 3)
+URL: https://shamanapp.atlassian.net/wiki/spaces/Product/pages/1862991874
+
+# Shaman builder descriptions (to share with CS/BD)
+
+Path: Product
+
+ion positions, footnotes, layout type and personalisation variants (e.g. persona, segment). Global brand content cards can be shared via the Content Cards Hub and translated or localised for markets. Existing CLM content can be converted into Smart Content Cards using MagicExtract. Cards can be exported to Veeva Vault PromoMats as MLR Material for review and approval, or it can be mapped to Veeva Modular Content for downstream use.
+Shaman Compliance Assistants (incl MLR Compare)
+Built-in compliance checks that run during content authoring to ensure tactics are proofread, high quality, and MLR-ready. Includes assistants for content quality (e.g. missing unsubscribe, approval number or URLs, token errors), language (grammar, spelling, readability across 35+ languages), and MLR Compare. Issues versus approved content are flagged in real time so authors can resolve them before submission to MLR, reducing rework and review cycles.
+Available in the Email Builder and Landing Page Builder, with extension to Slides planned for 2026.
+
+--- CHUNK 34 (source: confluence, relevance: 0.56) ---
+Title: How to setup brands for DesignHuddle (part 2)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1180794881
+
+# How to setup brands for DesignHuddle
+
+Path: Admin Space > Design Huddle
+
+can be reused for other Projects with the same brand.
+How do we deal with fonts?
+We expect the majority of projects on between 2- 5 brands per account. In total we estimate 5-15 brands per customer. Usually brands have 2-3 fonts (and different font weights) defined in a brand book. Its not uncommon however that PDF artwork of this brand contains more, ‘unofficial’ brand fonts.
+As part of the onboarding we can make sure we match the fonts of the brand book. Other fonts however, need to be uploaded or delivered for us to upload by the customer.
+We need to maintain a repository of all fonts we maintain, incl weights, brands, end date of contract and vendor of the font (Google font, Adobe font, Myfont).
+Instructions
+To set-up DesignHuddle brands please follow these steps:
+Step1
+Make sure you have all relevant information at hand
+accountID
+Account group name
+Brand name
+VVPM Id for Brand (if not added in Shaman account)
+Name of fonts + weights (if not added in DEH yet)
+Font files (if not installed yet)
+from customer
+internal (Google font, Adobe font, Myfont)
+I think we need a workflow here to: check font base/ check if customer can supply/ check if part of onboarding / request to buy fonts (Maurice, Maksim).
+Step2
+Login Designhuddle and check if brand exists
+Go to
+shaman.designhuddle.com
+:
+Go to Admin (top menu) > Accounts (side menu)
+Check if the account (same name as
+Account Group Name
+of the related Shaman Account) already has been setup:
+Click into the right account.
+
+--- CHUNK 35 (source: confluence, relevance: 0.55) ---
+Title: Email Style Guide Enforcement (part 2)
+URL: https://shamanapp.atlassian.net/wiki/spaces/~7120205377cd6ab0774fdf9cb1b725ba8cf14c/pages/1764720641
+
+# Email Style Guide Enforcement
+
+Path: Overview > Product requirements
+
+brand button styles.
+These rejections are costly, slow down the time-to-market for critical sales and marketing content, and create friction for Content Creators who are just trying to do their jobs. Creators lack a simple, "guardrailed" way to build content, forcing them to manually reference brand guides and increasing the likelihood of human error.
+Objective
+This feature enables a "Style Guide" within our Unlayer email builder.
+Objective:
+To guarantee brand and legal compliance in all email content by programmatically enforcing pre-approved styles (fonts, colors, buttons, etc.).
+Hypothesis:
+By locking down styles and providing creators with a pre-approved list of options, we will:
+Drastically reduce the number of MLR rejections related to visual styling.
+Increase the speed and efficiency of content creation.
+Improve Brand Manager confidence in the content being produced.
+Success metrics
+List project goals and the metrics you'll use to judge its success.
+Goal
+Metric
+Reduce MLR rejection rate
+Reduction in MLR rejections attributed to "Brand Guideline" or "Styling" errors (Target: X% reduction)
+Decrease Content creation time
+Decrease in average time to create a new email from a template (Target: X% reduction).
+User experience enhancement
+Positive feedback from Brand Managers and Content Creators regarding ease of use and compliance confidence.
+Assumptions
+Requirements
+PEOS-3388
+f0ee76d4-0a15-3fac-a925-a4381dd067d8
+System Jira
+Out of Scope
+
+--- CHUNK 36 (source: confluence, relevance: 0.55) ---
+Title: Email Brand Design System (part 15)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/801406995
+
+# Email Brand Design System
+
+Path: Admin Space > Approved Email Builder
+
+s non-product related materials.
+When the images are uploaded to a Management account in Hub, we can share them with all participant accounts in the same account group, by setting the status to Live. Any images in Live status will be available in the library for all participant accounts, shown together with a Global tag to help users distinguish the global content from what they have added to the library themselves.
+NB: Participant accounts can not edit, delete, or rename global images.
+Brand Design Templates
+Similarly to brand images, we can share Global design templates (Templates, fragments & insertable blocks) from a Hub management account to all Participant accounts within the same company group. The same policy applies here that once a Design Template has been put to Live status, it will be shared and made available in all participant accounts (Also marked with a “Global” tag)
+There is a recurring sync running every 30 minutes that refreshes the Hub and shares any new content put to live from the Management to the Participant account.
+NB: Participant accounts can not edit or delete Global Design Templates. They can however make a local duplicate which can be tailored to their needs.
+Modular content
+TBC
+Duplicate complete email documents
+Once an account has been connected to the Hub and the Hub itself has been enabled, users can both share and localise materials using the Hub.
+
+--- CHUNK 37 (source: confluence, relevance: 0.55) ---
+Title: How to setup brands for DesignHuddle (part 4)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1180794881
+
+# How to setup brands for DesignHuddle
+
+Path: Admin Space > Design Huddle
+
+f you have that). Then click other weights in UI to add them:
+Organising fonts in Editor UI for end user:
+If you have more fonts you can create more font entries by reusing Upload or ‘Drag and drop’. You can also group subfamilies like: Condensed or ExtraBold.
+Design Huddle supports the following font file types for upload:
+.otf
+,
+.ttf
+, and
+.woff
+. You can upload these fonts under the Brand/Asset tab or directly into the Editor.
+Step5
+Add colours to Brand in Designhuddle
+Select the brand you wish to add colours to, select “Colors” from the menu on the left hand side. First a name of the colour palette needs to be added, this could be the name of the brand. Add the name and then click “Add” on the right hand side.
+A rectangle with a plus sign will appear, click the add symbol to add the first colours to the palette.
+Add the hexcode and click Add.
+Repeat the same process until all brand colours are added.
+Step6
+Add Designhuddle Font ID to Shaman
+Go to Brand (top menu)
+Select the right brand
+Now you see the ID of the brand in the url
+Go to
+https://cloud.eu1.shamanadmin.com/
+Go to account > Settings
+Go to brands > Edit brand
+Make sure you also setup DesignHuddle credentials in account settings.
+Related articles
+How to setup DesignHuddle in an account
+List of Design Huddle brands
+
+--- CHUNK 38 (source: confluence, relevance: 0.55) ---
+Title: How to setup DesignHuddle in an account (part 2)
+URL: https://shamanapp.atlassian.net/wiki/spaces/ADMIN/pages/1180270593
+
+# How to setup DesignHuddle in an account
+
+Path: Admin Space > Design Huddle
+
+o the next step
+If the account is not created: click Add new account and add Name (same as
+account group name
+, for AccountID use lowercase and  _ for space (eg Bausch Health becomes: bausch_health). Status is Active:
+Step3
+Create 2 new users in DesignHuddle
+Each Shaman account gets 2 unique DesignHuddle users with the following IDs:
+Role: account admin
+> concatenate Shaman accountID + 1, eg: 1221 + 1 = 12211
+Role: user
+> concatenate Shaman accountID + 2, eg: 1221 + 2 = 12212
+Go to page Account users
+Check if these users have already been setup (check userID)
+If not, click Add new user:
+Prefill the fields accordingly and hit Save:
+Step4
+Add these DesignHuddle credentials in Superadmin
+Go to the Shaman account settings
+Go to Settings and click Edit
+Scroll down, add DesignHuddle credentials (where User code == UserID)
+Save settings
+Make sure you also setup DesignHuddleIDs for brands/ products. Without this ID added, the brand will not show up in the list to create a Slide Project or Visual Component.
+Related articles
+How to setup brands for DesignHuddle
+
+--- CHUNK 39 (source: slack, relevance: 0.55) ---
+Title: Untitled
+
+[2025-07-03] Xavier Verbij: Hi, Almirall wants to enhance integration with Veeva PromoMats to improve workflows for their end users.
+
+They want to integrate their Claims and Visual library into Shaman. What are the steps that need to be taken on our end to achieve this? Any documentation that can be shared with Almirall?
+
+--- CHUNK 40 (source: helpcenter, relevance: 0.54) ---
+Title: Shaman Connect - Prepare
+URL: https://help.shamancloud.com/en/articles/6525629-shaman-connect-prepare
+
+# Shaman Connect - Prepare
+
+Summary
+Configuration
+User guide
+Shaman Connect Introduction
+Summary
+Prepare your sales call ahead of time by creating a one-off selection of slides and/or Brand Stories that can be presented during the meeting. Shaman Connect Prepare allows the field teams to prepare meetings in advance on an account level.
+By opening the presentation with an account selected, you can create a unique selection ahead of your next call. Once prepared, the Connect Menu will provide the opportunity to present your selection the next time you open the presentation with the same account selected.
+Configuration
+The Prepare feature can be toggled on in the Shaman Menu settings before syncing the presentation to Veeva. If it is used in combination with the Brand Stories feature, the user will be able to choose between Brand Stories, slides, or a mix of both when preparing for the meeting.
+User guide
+In order to prepare for a meeting, the presenter must first open the presentation and select an account. Once this has been done, the Connect menu can be opened, and the Prepare tab can be found under the Profile section.
+​
+NB:
+The Profile section is retracted by default, and must be opened before the Prepare tab can be accessed.
+Once in the tab, select the slides and/or Brand Stories to be presented, and click 'Add x items' to save the selection.
+​
+Once the selection has been prepared, the presenter will see an overview of the slides/stories that have been selected. Here it is possible to make changes such as adding more content, removing slides or stories, and changing the order.
+Once happy with the prepared selection, the presenter can close the menu and end the presentation. The next time the presentation is opened with the same account selected, the user will be provided the opportunity to present the prepared slides.
+When clicking 'present prepared slides' the presentation will start immediately on the first slide, and the presenter can swipe through the selection or navigate by opening the progress bar and selecting a slide from the swimlane.
+

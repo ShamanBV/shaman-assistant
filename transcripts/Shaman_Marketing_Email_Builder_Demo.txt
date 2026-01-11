@@ -1,0 +1,142 @@
+Hello, Takeda Japan team.
+This is Maurice from Xamon, and I'm recording this video for you as promised to demo the Xamon Marketing Email Builder.
+So in Xamon, we have two builders for email, one for approved email using Viva, and one for marketing email using Marketing Cloud.
+Items like the visuals, templates, logos can be used if you want between these two builders, and also email documents can be copied over
+from one to the other. So let's dive into Marketing Email Builder, and let's create a new email.
+So I'm selecting a brand here, which means that the access I have to brand design system, templates and assets will be dependent on this.
+I select a language and I click Create. But particularly in the Marketing Email Builder, we see these steps to create,
+and the first step is the general overview where we have some metadata.
+We can see the MLR status in Viva. We can have some information on a first impression, which is subject line and pre-header,
+and you can set some marketing details. So we can set this up in accordance with your account.
+I can enable UTM or MTM links here, which once set, we will add to each and every link in the email, and you can keep track of your versioning.
+You can also compare versions and you can refer to older versions, at least as long as they're not approved.
+So when you want to create an email, the first step is Magic Copy.
+In Magic Copy, you can give the system a little brief. For example, I want to create a Congress invite
+or maybe a website, a webinar invite, disease awareness. What do we want to tell the user or the recipient?
+Why is this important? More background information, follow-up to action, and then the desired length, so the system will generate the first text for you.
+Once you have this text, and I'll skip it for now, you can select a template.
+These templates are templates that you can get from Global. We have a template for each and every product almost in Takeda, and you can also copy those
+and create your own templates of that, or if you have a very nice email, you can also save it as a template for reuse.
+So you see the templates here. You can search, you can search on tags, and I'm selecting this one.
+It will load the template, and now I'm in the editor where I can start designing, further designing my email.
+I have the preview here. I can go back.
+I can see this in mobile view, desktop view, and here are my items that I can add, my blocks.
+So I can add another button if I need. This will depend on the brand, how the button looks and what the color is,
+whenever I click each and every element, we can set all properties here in the site.
+If I don't need items from my template, I can also select them and delete them.
+You can add headers in styling, text in styling, dividers, we have a timer.
+So if you have maybe an event coming up, this can count down till the time you set over here, and you can set colors, backgrounds,
+and styling for this particular timing. So this timer will keep counting down once you create it.
+Another thing you can do is you can add to calendar when you have an event and you want to make it easy for people to add it to their calendar.
+You click, you see here the details. You add the name of the event, the day, duration, et cetera.
+If it's a one day event, multi-day event, and we will generate an ICS out of that.
+And so people can either download that and add it to their calendar, or if they are on these online calendars,
+they can just click it to add it to their calendar. We have some more stuff here.
+So you can look at these, like adding a map, a QR code, et cetera.
+Then you can add all kinds of blocks here in two columns, but there's much more.
+And you can also set these columns, by the way, with your mouse, so you can get any percentage that you like.
+And here, I want to highlight the custom block placeholder. So this is a placeholder.
+Once you've clicked this, you can click a pre-designed block, and you can just click and add that pre-designed block in here, and you can keep adding.
+Also, if you work with dynamic placeholders, it's meaning that this is a piece of information that will depend on the person,
+the attributes of the person receiving this. You can add this placeholder, and this will basically determine the position
+in the email where this placeholder will go. You set the placeholders, you go over here, which we will do shortly.
+Then, if you want to add an image, you can basically click the image or add an image placeholder, and go to your visual library.
+So this visual library can consist of images you or your colleagues created before, like I think in one of the demos, we created this one.
+You can also, once you have selected it and you want to change it, you can also go over to the visual builder and make edits.
+So you click edit, it will open a new tab, and in that tab, the visual builder will open, and you can say that, for example,
+I want to change this person for another person. So you then can either go to the library and add a person.
+This is something that we will be releasing soon. We're running a, let's see, or let's say Japanese man with a baseball cap, with a baseball cap.
+And we're working on an easier interface, by the way, so you can expect this early next year.
+So we can come up with, for example, this particular person. I can add it to my canvas, and then I can also remove the background,
+which is another AI feature. You can do this for every image that you upload, and it will basically keep this.
+You can then export this image back into the visual library, and from there, you can pick it up in the email builder.
+So this is a way how these builders work together. Obviously, you can also do this for graphics and a lot of medical items that you want to do.
+Let me show you an example of that as well. So I click update now, and it will now be creating a visual perfect for email.
+It will update the image in the library, and it will finish up the process, which then brings me back to, well, I can close this builder, I'm sorry,
+and I can click replace, and now we see that we updated the image.
+I can also get an image. Let's say you want an image from a, yeah, let's do that.
+Let's say in the email, you want an image that you create from slides.
+So let's put in a placeholder first. We click the placeholder, click visual library, and we're going to create a new visual.
+So we're going to call this visual demo graph. Graph.
+Make sure that you select the same brand, else it will not be available.
+And I can say here that I want an email visual, and I'm going to repurpose a slide from the CLM library and I want this to be a rectangle.
+So now this will take me to the library, and in this library, I can find the slides that I have available in Xamarin,
+and let's say I want this particular image. I'm going to select this.
+This is going to load this into a cropper where I can basically say that this is the image this is the area that I need,
+and this is going to create a visual out of this graph. If you want to change the text or you may have a background that is not white
+and you want to change to white, these are things that you can do in this particular builder.
+So just to give you an example, make this kind of this color.
+Probably not the best example, but it will serve for now.
+And here we see that we were actually able to bring in another background.
+We're going to save this now, and then we're going to pick it up in the builder.
+I need to complete something, the country. You publish, and now this will generate a visual ready for email.
+I can again close this. In this case, I will need to reload the editor.
+I think it didn't save this place. To bring in the visual that we just created.
+Okay, it's not the nicest one, but you see how this works.
+Another thing you can do is, let's say you want to change this.
+You don't like this much, and you have something in Viva. We can pull images from Viva in here from your Viva Vault,
+and we can also pull in different files. So in this case, I want to use something that is in this InDesign file.
+So I will select it, and it will now call to Viva, and it will import the rendition of this file.
+It will check if it's multiple pages, yes or no, then you need to select a page.
+If not, it will convert it, and it will bring it into Java. From here, I have the availability to crop it.
+Maybe I just want a certain part of the visual, and not the entire visual.
+So this is what you can do in a very simple way. Let's wait until the EDF has been converted and imported.
+Here we are, and in this case, let's say I want to have the word eat, and so I can just take a part from this brochure,
+and I can crop it. I can also do other things.
+So maybe I want to give it round corners, and when I'm happy, I click Save and Exit, and it will save in the library, so other people can use it as well,
+and it will add it here in your email. If you have icons, we can upload them for you, and you can access them from the Icons tab,
+and the nice thing about this is if you need icons, we can bring them in in the colors of your brand.
+So in this case, let's use the brown, and it's generating that PNG on the fly, and obviously, I can make it smaller now,
+and I can also add multiple columns if I want. So to kind of quickly show you this, I'm gonna bring this into this column.
+Let's for now just copy this image, and I'm bringing this over like that.
+All right, this is all about images. Then I'm not sure if you work with modular content.
+I will very briefly show you. It's a great feature, and we're working on a reference manager which has elements similar to this,
+so you will see the content modules, the content cards as we're going to call them, for your particular brand.
+You can also fill with them on certain personas if you have that option.
+You can then open the content card, in this case, Rapid Tumor Response, and the way this is set up, and you can set this up any way you like,
+is that it has multiple types, asset types, and those types, asset types, have options.
+So in this case, I can choose from these teasers, and I'm gonna take this one here.
+I click Add, and because this is a teaser, this will now bring this in the email in the header style, and it will renumber the citations to one and two
+because we want to have a numbered list starting with one without gaps.
+Now I need to add the reference block below. And this is going to be in sync with references that I use in the email.
+So we're gonna bring this for all references. Today, this works for content card references.
+But the way this works is that, let's say I now wanna bring in a new citation here.
+So I click Add. It's gonna bring it in as three.
+I can click Update. I can go, and I see that three has been added, and I can now even delete this, and this will tell me that I need to update the list.
+I click Update, and this will bring it back to two. Last thing I wanted to show is, once you ready-made the email, before you send it out to MLR,
+you can go and do some compliancy checks. So we'll check this on quality items.
+So in this case, we have some emails, some tokens from Viva that will not work in here.
+And I actually need to remove them else I cannot export this email.
+Peace link, where is peace link? You can actually, it can highlight this.
+Okay, we see that the more info has a link. So it's also checks for links, right, which is great.
+I can show you here using the peace link item. So I'm gonna break this for now, break this, break this.
+So at least we got to use this. So at least we got the critical items out of the way.
+It can check for disclaimers, for, yeah, some of these items.
+We need to bring in a footer, by the way, over here. And here also we need to break this because this is not L's first one.
+Then we can check for language items. So it can check for spelling, grammar and stuff like that.
+That's actually happening here. And also we have a nice feature that compares pre-approved items compared to what you have in this email.
+We haven't tested this in Japanese. So we can discuss if you think this is something that you need.
+All right, when the email is done, you can then even add dynamic content.
+So I'm not sure you're using this. How it works is I can select these kind of blocks and then I can bring them in.
+And I can say that whenever the documents that I have in CRM or specialty or position or whatever value you have here, let's do maybe specialty.
+Whenever that value is medical oncologist, this one and this one, then add this piece.
+Else, for example, add another piece. So like the second block.
+Now I could say, well, one specialty is something else, right?
+Then add this one. And the logic will basically start here.
+See if this condition is met. If not, it will go to the next one.
+Then finally, you go to MLR. So this will create an MLR document for you.
+You can give this an owner as well. You can add a responsive view if you like.
+And now I can click create and this will now create a PDF package or MLR review.
+And also a mobile design PDF. And once that package is created, it will call the Viva API,
+and create a document. And in this case, update a role because we want to make a person owner and come on content creator.
+That's how we set it up. We can discuss that later.
+And we finish up. And once this is done, we have the job ready for you in Viva for Commodats.
+So let's go here. Let's look at the details.
+And let's click this link. This will bring me down into Viva.
+And then here we have the item ready to start review. Once the review is done, you go to the expert tab.
+And here we can include marketing instructions and dynamic content.
+You need to be approved before you can do this. And then you can sync over.
+Then you can send this package to email, which can then be uploaded in Salesforce Marketing Cloud.
+All right, I realized this is a long video. I thought I'd make it 10 minutes, but I see now it's over 20.
+I hope you enjoyed this video. And yeah, we'll speak later.
+Bye-bye.
