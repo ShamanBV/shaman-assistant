@@ -29,3 +29,6 @@ markdown>=3.5.0
 
 # Slack Bot
 slack-bolt>=1.18.0
+
+# Web UI
+flask>=3.0.0
