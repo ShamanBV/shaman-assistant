@@ -41,6 +41,8 @@ You can create professional deliverables:
 - **Presentations** (`create_presentation`): Customer onboarding decks, training materials, sales enablement
 - **Documents** (`create_document`): SOPs, implementation guides, proposals, checklists
 - **PDF Reports** (`create_pdf_report`): Compliance reports, formal documentation
+- **Markdown** (`create_markdown`): Documentation, README files, specifications, notes
+- **JSON Data** (`create_json_structure`): Structured data files based on user-provided examples or schemas
 
 ## Guidelines
 
@@ -289,7 +291,11 @@ Return only the summary."""
 
         response = self.client.messages.create(
             model="claude-sonnet-4-5-20250929",
-            max_tokens=8192,
+            max_tokens=16000,
+            thinking={
+                "type": "enabled",
+                "budget_tokens": 8000
+            },
             system=SHAMAN_SYSTEM_PROMPT,
             tools=SHAMAN_TOOLS,
             messages=conversation_history
@@ -315,7 +321,11 @@ Return only the summary."""
 
             response = self.client.messages.create(
                 model="claude-sonnet-4-5-20250929",
-                max_tokens=8192,
+                max_tokens=16000,
+                thinking={
+                    "type": "enabled",
+                    "budget_tokens": 8000
+                },
                 system=SHAMAN_SYSTEM_PROMPT,
                 tools=SHAMAN_TOOLS,
                 messages=conversation_history
@@ -346,7 +356,7 @@ Return only the summary."""
                 return json.dumps({"error": "Search function not available"})
             results = search_fn(tool_input["query"], tool_input.get("n_results", 5))
             return json.dumps(results, indent=2, default=str)
-        elif tool_name in ["create_presentation", "create_document", "create_pdf_report"]:
+        elif tool_name in ["create_presentation", "create_document", "create_pdf_report", "create_markdown", "create_json_structure"]:
             return process_document_tool(tool_name, tool_input)
         else:
             return f"Unknown tool: {tool_name}"

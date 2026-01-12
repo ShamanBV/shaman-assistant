@@ -28,8 +28,11 @@ def serialize_history(history: list) -> list:
             content = []
             for block in msg["content"]:
                 if hasattr(block, "type"):
-                    # Anthropic API object (TextBlock, ToolUseBlock, etc.)
-                    if block.type == "text":
+                    # Anthropic API object (TextBlock, ToolUseBlock, ThinkingBlock, etc.)
+                    if block.type == "thinking":
+                        # Skip thinking blocks - they don't need to be persisted
+                        continue
+                    elif block.type == "text":
                         content.append({"type": "text", "text": block.text})
                     elif block.type == "tool_use":
                         content.append({
@@ -46,7 +49,8 @@ def serialize_history(history: list) -> list:
                         })
                 else:
                     content.append(block)
-            serialized.append({"role": msg["role"], "content": content})
+            if content:  # Only add if there's content after filtering
+                serialized.append({"role": msg["role"], "content": content})
         else:
             serialized.append(msg)
     return serialized
