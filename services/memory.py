@@ -60,12 +60,15 @@ class ConversationMemory:
         serialized = []
         for msg in self.history:
             if isinstance(msg.get("content"), list):
-                # Handle tool use blocks
+                # Handle tool use blocks and thinking blocks
                 content = []
                 for block in msg["content"]:
                     if hasattr(block, "type"):
                         # Anthropic API object
-                        if block.type == "text":
+                        if block.type == "thinking":
+                            # Skip thinking blocks - they don't need to be persisted
+                            continue
+                        elif block.type == "text":
                             content.append({"type": "text", "text": block.text})
                         elif block.type == "tool_use":
                             content.append({
@@ -76,7 +79,8 @@ class ConversationMemory:
                             })
                     else:
                         content.append(block)
-                serialized.append({"role": msg["role"], "content": content})
+                if content:  # Only add if there's content after filtering
+                    serialized.append({"role": msg["role"], "content": content})
             else:
                 serialized.append(msg)
         return serialized

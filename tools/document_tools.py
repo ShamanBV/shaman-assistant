@@ -179,6 +179,59 @@ def create_pdf(title: str, filename: str, content: str) -> str:
     return str(filepath)
 
 
+def create_markdown(title: str, filename: str, content: str) -> str:
+    """
+    Create a Markdown file.
+
+    Args:
+        title: Document title (used as H1 heading)
+        filename: Output filename (without extension)
+        content: Markdown-formatted content
+
+    Returns:
+        Path to created file
+    """
+    full_content = f"# {title}\n\n{content}"
+    filepath = OUTPUT_DIR / f"{filename}.md"
+    filepath.write_text(full_content, encoding="utf-8")
+    return str(filepath)
+
+
+def create_json(filename: str, data: dict | list, schema_description: str = None) -> str:
+    """
+    Create a JSON file with structured data.
+
+    Args:
+        filename: Output filename (without extension)
+        data: The JSON data structure (dict or list)
+        schema_description: Optional description of the schema used
+
+    Returns:
+        Path to created file
+    """
+    import json
+
+    output = {
+        "_meta": {
+            "generated": datetime.now().isoformat(),
+            "generator": "Shaman Assistant"
+        }
+    }
+
+    if schema_description:
+        output["_meta"]["schema_description"] = schema_description
+
+    # Merge data into output (or wrap if it's a list)
+    if isinstance(data, dict):
+        output["data"] = data
+    else:
+        output["data"] = data
+
+    filepath = OUTPUT_DIR / f"{filename}.json"
+    filepath.write_text(json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8")
+    return str(filepath)
+
+
 # Tool definitions for Claude API
 DOCUMENT_TOOLS = [
     {
@@ -244,6 +297,38 @@ DOCUMENT_TOOLS = [
             },
             "required": ["title", "filename", "content"]
         }
+    },
+    {
+        "name": "create_markdown",
+        "description": "Create a Markdown file (.md). Use for documentation, README files, notes, specifications, or any text-based content with formatting.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "title": {"type": "string", "description": "Document title (becomes H1 heading)"},
+                "filename": {"type": "string", "description": "Output filename without extension"},
+                "content": {"type": "string", "description": "Markdown-formatted content (supports headings, lists, code blocks, tables, etc.)"}
+            },
+            "required": ["title", "filename", "content"]
+        }
+    },
+    {
+        "name": "create_json_structure",
+        "description": "Create a JSON file with structured data. Use when the user provides an example structure or schema and wants to generate data in that format. Great for configuration files, data exports, API payloads, or any structured data.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "filename": {"type": "string", "description": "Output filename without extension"},
+                "data": {
+                    "description": "The JSON data structure to create (can be object or array)",
+                    "oneOf": [
+                        {"type": "object"},
+                        {"type": "array"}
+                    ]
+                },
+                "schema_description": {"type": "string", "description": "Optional description of the schema/structure used"}
+            },
+            "required": ["filename", "data"]
+        }
     }
 ]
 
@@ -266,6 +351,10 @@ def process_document_tool(tool_name: str, tool_input: dict) -> str:
             return create_docx(**tool_input)
         elif tool_name == "create_pdf_report":
             return create_pdf(**tool_input)
+        elif tool_name == "create_markdown":
+            return create_markdown(**tool_input)
+        elif tool_name == "create_json_structure":
+            return create_json(**tool_input)
         else:
             return f"Unknown document tool: {tool_name}"
     except Exception as e:
