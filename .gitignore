@@ -16,6 +16,10 @@ output/*.pdf
 output/*.md
 !output/.gitkeep
 
+# Conversation memory and learned knowledge
+conversations/
+learned_knowledge.json
+
 # Runtime data files (created by slack_bot.py)
 feedback_log.json
 pending_suggestions.json

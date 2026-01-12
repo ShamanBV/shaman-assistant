@@ -62,6 +62,12 @@ Examples:
         action="store_true",
         help="Agentic chat mode with document generation"
     )
+    parser.add_argument(
+        "--resume",
+        type=str,
+        metavar="SESSION_ID",
+        help="Resume a previous chat session (use with --chat)"
+    )
 
     args = parser.parse_args()
 
@@ -72,8 +78,8 @@ Examples:
         print("Check your .env file and API keys.")
         sys.exit(1)
 
-    if args.chat:
-        agentic_chat_mode()
+    if args.chat or args.resume:
+        agentic_chat_mode(resume_session=args.resume)
     elif args.ask:
         answer = orchestrator.process(args.ask, skip_cache=args.no_cache)
         print_answer(answer)
@@ -121,22 +127,39 @@ def print_search_results(results):
         print()
 
 
-def agentic_chat_mode():
+def agentic_chat_mode(resume_session: str = None):
     """Agentic chat mode with document generation capabilities."""
+    from services.memory import ConversationMemory, LearnedKnowledge
+
+    # Initialize memory
+    memory = ConversationMemory(session_id=resume_session)
+    learned = LearnedKnowledge()
+
     print("\n" + "=" * 70)
     print("Shaman Assistant - Agentic Chat Mode")
     print("=" * 70)
+
+    if resume_session and memory.history:
+        print(f"Resumed session: {memory.session_id}")
+        print(f"Loaded {len(memory.history)} previous messages")
+    else:
+        print(f"New session: {memory.session_id}")
+
     print("""
 Capabilities:
   - Answer questions about Shaman platform
   - Search knowledge base (product docs, support tickets, etc.)
-  - Generate documents:
-    * PowerPoint presentations (onboarding, training, sales)
-    * Word documents (SOPs, guides, proposals)
-    * PDF reports (compliance, formal docs)
+  - Generate documents (PPTX, DOCX, PDF)
+  - Learn and remember information
 
 Commands:
-  /quit       Exit
+  /learn <text>     Add knowledge (e.g., /learn Customer X uses Veeva Vault)
+  /learned          Show all learned knowledge
+  /forget <id>      Remove learned knowledge by ID
+  /sessions         List saved conversation sessions
+  /save             Save current conversation
+  /new              Start new conversation (saves current)
+  /quit             Exit (auto-saves)
 
 Type your request to get started.
 """)
@@ -149,28 +172,106 @@ Type your request to get started.
         print("Check your .env file and API keys.")
         return
 
-    conversation_history = []
+    conversation_history = memory.get_history()
 
     while True:
         try:
             user_input = input("\nYou: ").strip()
         except (EOFError, KeyboardInterrupt):
-            print("\n\nGoodbye!")
+            print("\n\nSaving conversation...")
+            memory.history = conversation_history
+            memory.save()
+            print(f"Saved to session: {memory.session_id}")
+            print("Goodbye!")
             break
 
         if not user_input:
             continue
 
+        # Command: quit
         if user_input.lower() in ["/quit", "/exit", "/q"]:
+            memory.history = conversation_history
+            memory.save()
+            print(f"Saved to session: {memory.session_id}")
             print("Goodbye!")
             break
 
+        # Command: learn
+        if user_input.lower().startswith("/learn "):
+            content = user_input[7:].strip()
+            if content:
+                chunk = learned.add(content)
+                print(f"Learned (ID: {chunk['id']}): {content}")
+            else:
+                print("Usage: /learn <knowledge to remember>")
+            continue
+
+        # Command: learned
+        if user_input.lower() in ["/learned", "/knowledge"]:
+            chunks = learned.list_all()
+            if chunks:
+                print(f"\nLearned Knowledge ({len(chunks)} items):")
+                print("-" * 40)
+                for chunk in chunks:
+                    print(f"  [{chunk['id']}] {chunk['content'][:60]}...")
+            else:
+                print("No learned knowledge yet. Use /learn <text> to add.")
+            continue
+
+        # Command: forget
+        if user_input.lower().startswith("/forget "):
+            try:
+                chunk_id = int(user_input[8:].strip())
+                if learned.delete(chunk_id):
+                    print(f"Removed knowledge ID: {chunk_id}")
+                else:
+                    print(f"Knowledge ID {chunk_id} not found")
+            except ValueError:
+                print("Usage: /forget <id>")
+            continue
+
+        # Command: sessions
+        if user_input.lower() == "/sessions":
+            sessions = ConversationMemory.list_sessions()
+            if sessions:
+                print(f"\nSaved Sessions ({len(sessions)}):")
+                print("-" * 40)
+                for s in sessions[:10]:  # Show last 10
+                    print(f"  {s['session_id']} - {s['message_count']} messages")
+            else:
+                print("No saved sessions yet.")
+            continue
+
+        # Command: save
+        if user_input.lower() == "/save":
+            memory.history = conversation_history
+            memory.save()
+            print(f"Saved to session: {memory.session_id}")
+            continue
+
+        # Command: new
+        if user_input.lower() == "/new":
+            memory.history = conversation_history
+            memory.save()
+            print(f"Saved session: {memory.session_id}")
+            memory = ConversationMemory()
+            conversation_history = []
+            print(f"Started new session: {memory.session_id}")
+            continue
+
+        # Regular message - process with assistant
         print("\nProcessing...")
         try:
             response, conversation_history = assistant.agentic_chat(
                 user_input, conversation_history
             )
             print(f"\nAssistant: {response}")
+
+            # Auto-save every few messages
+            if len(conversation_history) % 6 == 0:
+                memory.history = conversation_history
+                memory.save()
+
         except Exception as e:
             print(f"\nError: {e}")
             import traceback
