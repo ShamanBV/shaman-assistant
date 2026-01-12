@@ -1,11 +1,12 @@
 """
-MagicAnswer Orchestrator
-========================
+Shaman Assistant Orchestrator
+==============================
 The brain of the system. Handles:
 - Intent classification (bug/enhancement/question)
 - Query optimization
 - RAG pipeline
 - Response generation
+- Agentic document generation
 """
 import config
 from models import Intent, ClassificationResult, Answer, SearchResult
@@ -147,6 +148,53 @@ This helps us prioritize and track feature requests. Thanks for the suggestion!"
             "cache": self.cache.stats()
         }
 
+    def agentic_chat(
+        self,
+        user_message: str,
+        conversation_history: list = None
+    ) -> tuple[str, list]:
+        """
+        Agentic chat with tool-use capabilities.
+
+        Supports:
+        - Knowledge base search via RAG
+        - Document generation (PPTX, DOCX, PDF)
+
+        Args:
+            user_message: The user's message
+            conversation_history: Prior conversation history (optional)
+
+        Returns:
+            Tuple of (response_text, updated_conversation_history)
+        """
+        if conversation_history is None:
+            conversation_history = []
+
+        def search_fn(query: str, n_results: int = 5) -> list[dict]:
+            """Search function for the agentic loop."""
+            results = self.vector_store.search(query, n_results=n_results)
+            return [
+                {
+                    "content": r.content,
+                    "source": r.source,
+                    "title": r.title,
+                    "url": r.url,
+                    "relevance": r.relevance
+                }
+                for r in results
+            ]
+
+        return self.llm.agentic_chat(user_message, conversation_history, search_fn)
+
+
+class ShamanAssistant(MagicAnswerOrchestrator):
+    """
+    Extended orchestrator with Shaman-specific branding.
+
+    Alias for MagicAnswerOrchestrator with agentic capabilities.
+    """
+    pass
+
 
 # Convenience function for quick testing
 def ask(question: str) -> str:
@@ -154,3 +202,9 @@ def ask(question: str) -> str:
     orchestrator = MagicAnswerOrchestrator()
     answer = orchestrator.process(question)
     return answer.text
+
+
+def chat(message: str, history: list = None) -> tuple[str, list]:
+    """Quick helper for agentic chat with tools."""
+    orchestrator = ShamanAssistant()
+    return orchestrator.agentic_chat(message, history)

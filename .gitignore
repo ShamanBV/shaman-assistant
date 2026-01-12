@@ -9,6 +9,13 @@ knowledge_base/
 backups/
 content_input/
 
+# Generated document output (keep .gitkeep)
+output/*.pptx
+output/*.docx
+output/*.pdf
+output/*.md
+!output/.gitkeep
+
 # Runtime data files (created by slack_bot.py)
 feedback_log.json
 pending_suggestions.json
