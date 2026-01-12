@@ -18,6 +18,40 @@ from orchestrator import ShamanAssistant
 from services.memory import ConversationMemory, LearnedKnowledge
 
 app = Flask(__name__)
+
+
+def serialize_history(history: list) -> list:
+    """Convert conversation history to JSON-serializable format."""
+    serialized = []
+    for msg in history:
+        if isinstance(msg.get("content"), list):
+            content = []
+            for block in msg["content"]:
+                if hasattr(block, "type"):
+                    # Anthropic API object (TextBlock, ToolUseBlock, etc.)
+                    if block.type == "text":
+                        content.append({"type": "text", "text": block.text})
+                    elif block.type == "tool_use":
+                        content.append({
+                            "type": "tool_use",
+                            "id": block.id,
+                            "name": block.name,
+                            "input": block.input
+                        })
+                    elif block.type == "tool_result":
+                        content.append({
+                            "type": "tool_result",
+                            "tool_use_id": block.tool_use_id,
+                            "content": block.content
+                        })
+                else:
+                    content.append(block)
+            serialized.append({"role": msg["role"], "content": content})
+        else:
+            serialized.append(msg)
+    return serialized
+
+
 app.secret_key = secrets.token_hex(16)
 
 # Global assistant instance (lazy loaded)
@@ -66,8 +100,8 @@ def chat():
         assistant = get_assistant()
         response, history = assistant.agentic_chat(user_message, history)
 
-        # Update session
-        session["history"] = history
+        # Update session (serialize to avoid JSON serialization errors)
+        session["history"] = serialize_history(history)
         session.modified = True
 
         return jsonify({
