@@ -523,6 +523,29 @@
             opacity: 1;
         }
 
+        /* File links in messages */
+        .file-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--green-50);
+            color: var(--green-700);
+            padding: 6px 12px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            margin: 4px 0;
+            border: 1px solid var(--green-200);
+            transition: all 0.2s;
+        }
+
+        .file-link:hover {
+            background: var(--green-100);
+            border-color: var(--green-400);
+            color: var(--green-800);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .sidebar {
@@ -559,6 +582,7 @@
         </div>
         <div class="header-actions">
             <button class="btn" onclick="newSession()">+ New Chat</button>
+            <button class="btn" onclick="toggleFiles()">📁 Files</button>
             <button class="btn" onclick="toggleKnowledge()">Knowledge</button>
         </div>
     </header>
@@ -629,6 +653,20 @@
         </div>
     </aside>
 
+    <!-- Files Panel -->
+    <aside class="knowledge-panel" id="filesPanel">
+        <div class="panel-header">
+            <h3>Generated Files</h3>
+            <button class="btn btn-icon" onclick="toggleFiles()">&times;</button>
+        </div>
+        <div class="panel-content" id="filesList">
+            <!-- Files loaded dynamically -->
+        </div>
+        <div class="panel-footer">
+            <button class="btn" onclick="loadFiles()" style="width: 100%;">Refresh</button>
+        </div>
+    </aside>
+
     <!-- Toast -->
     <div class="toast" id="toast"></div>
 
@@ -693,11 +731,17 @@
             const avatar = role === 'assistant' ? 'S' : 'U';
 
             // Simple markdown-like formatting
-            const formatted = content
+            let formatted = content
                 .replace(/\n\n/g, '</p><p>')
                 .replace(/\n/g, '<br>')
                 .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
                 .replace(/`([^`]+)`/g, '<code>$1</code>');
+
+            // Make file paths clickable (output/filename.ext or ./output/filename.ext)
+            formatted = formatted.replace(
+                /(?:\.\/)?output\/([a-zA-Z0-9_-]+\.(md|json|pdf|docx|pptx))/g,
+                '<a href="/view/$1" target="_blank" class="file-link">📄 $1</a>'
+            );
 
             div.innerHTML = `
                 <div class="message-avatar">${avatar}</div>
@@ -706,6 +750,11 @@
 
             messages.appendChild(div);
             scrollToBottom();
+
+            // Refresh files panel if it's open
+            if (document.getElementById('filesPanel').classList.contains('open')) {
+                loadFiles();
+            }
         }
 
         function scrollToBottom() {
@@ -737,10 +786,69 @@
 
         function toggleKnowledge() {
             const panel = document.getElementById('knowledgePanel');
+            document.getElementById('filesPanel').classList.remove('open');
             panel.classList.toggle('open');
             if (panel.classList.contains('open')) {
                 loadKnowledge();
             }
+        }
+
+        function toggleFiles() {
+            const panel = document.getElementById('filesPanel');
+            document.getElementById('knowledgePanel').classList.remove('open');
+            panel.classList.toggle('open');
+            if (panel.classList.contains('open')) {
+                loadFiles();
+            }
+        }
+
+        async function loadFiles() {
+            try {
+                const response = await fetch('/api/files');
+                const data = await response.json();
+
+                const list = document.getElementById('filesList');
+                if (data.files.length === 0) {
+                    list.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 20px;">No generated files yet</p>';
+                } else {
+                    list.innerHTML = data.files.map(file => {
+                        const icon = getFileIcon(file.type);
+                        const canPreview = ['md', 'json'].includes(file.type);
+                        return `
+                            <div class="knowledge-item" style="display: flex; align-items: center; gap: 12px;">
+                                <span style="font-size: 24px;">${icon}</span>
+                                <div style="flex: 1; min-width: 0;">
+                                    <div style="font-weight: 500; overflow: hidden; text-overflow: ellipsis;">${file.name}</div>
+                                    <div style="font-size: 12px; color: var(--text-muted);">${formatFileSize(file.size)}</div>
+                                </div>
+                                <div style="display: flex; gap: 4px;">
+                                    ${canPreview ? `<a href="/view/${file.name}" target="_blank" class="btn btn-icon" title="View">👁</a>` : ''}
+                                    <a href="/download/${file.name}" class="btn btn-icon" title="Download">⬇</a>
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+                }
+            } catch (error) {
+                console.error('Error loading files:', error);
+            }
+        }
+
+        function getFileIcon(type) {
+            const icons = {
+                'md': '📝',
+                'json': '📋',
+                'pdf': '📕',
+                'docx': '📘',
+                'pptx': '📊'
+            };
+            return icons[type] || '📄';
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+            return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
         }
 
         async function loadKnowledge() {
