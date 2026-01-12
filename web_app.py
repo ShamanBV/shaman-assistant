@@ -10,6 +10,8 @@ Usage:
 Then open http://localhost:5000 in your browser.
 """
 import json
+import os
+from pathlib import Path
 from flask import Flask, render_template, request, jsonify, session
 from datetime import datetime
 import secrets
@@ -18,6 +20,18 @@ from orchestrator import ShamanAssistant
 from services.memory import ConversationMemory, LearnedKnowledge
 
 app = Flask(__name__)
+
+# Use stable secret key (persisted to file so sessions survive restarts)
+SECRET_KEY_FILE = Path("./.flask_secret_key")
+if SECRET_KEY_FILE.exists():
+    app.secret_key = SECRET_KEY_FILE.read_text().strip()
+else:
+    app.secret_key = secrets.token_hex(32)
+    SECRET_KEY_FILE.write_text(app.secret_key)
+
+# Server-side session storage (avoids cookie size limits)
+SESSIONS_DIR = Path("./web_sessions")
+SESSIONS_DIR.mkdir(exist_ok=True)
 
 
 def serialize_history(history: list) -> list:
@@ -56,7 +70,22 @@ def serialize_history(history: list) -> list:
     return serialized
 
 
-app.secret_key = secrets.token_hex(16)
+def save_web_session(session_id: str, history: list):
+    """Save session history to file (avoids cookie size limits)."""
+    filepath = SESSIONS_DIR / f"{session_id}.json"
+    filepath.write_text(json.dumps(history, indent=2, default=str), encoding="utf-8")
+
+
+def load_web_session(session_id: str) -> list:
+    """Load session history from file."""
+    filepath = SESSIONS_DIR / f"{session_id}.json"
+    if filepath.exists():
+        try:
+            return json.loads(filepath.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            return []
+    return []
+
 
 # Global assistant instance (lazy loaded)
 _assistant = None
@@ -97,22 +126,30 @@ def chat():
     if not user_message:
         return jsonify({"error": "Empty message"}), 400
 
-    # Get or initialize conversation history
-    history = session.get("history", [])
+    # Get session ID (stored in cookie, small)
+    session_id = session.get("session_id")
+    if not session_id:
+        session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+        session["session_id"] = session_id
+        session.modified = True
+
+    # Load conversation history from file (not cookie - avoids size limits)
+    history = load_web_session(session_id)
 
     try:
         assistant = get_assistant()
         response, history = assistant.agentic_chat(user_message, history)
 
-        # Update session (serialize to avoid JSON serialization errors)
-        session["history"] = serialize_history(history)
-        session.modified = True
+        # Save to file (serialize to avoid JSON serialization errors)
+        save_web_session(session_id, serialize_history(history))
 
         return jsonify({
             "response": response,
-            "session_id": session.get("session_id")
+            "session_id": session_id
         })
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         return jsonify({"error": str(e)}), 500
 
 
@@ -160,36 +197,32 @@ def list_sessions():
 @app.route("/api/session/new", methods=["POST"])
 def new_session():
     """Start a new session."""
-    # Save current session
-    if session.get("history"):
-        memory = ConversationMemory(session_id=session.get("session_id"))
-        memory.history = session["history"]
-        memory.save()
-
     # Create new session
-    session["session_id"] = datetime.now().strftime("%Y%m%d_%H%M%S")
-    session["history"] = []
+    new_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+    session["session_id"] = new_id
     session.modified = True
+
+    # Initialize empty session file
+    save_web_session(new_id, [])
 
     return jsonify({
         "success": True,
-        "session_id": session["session_id"]
+        "session_id": new_id
     })
 
 
 @app.route("/api/session/load/<session_id>", methods=["POST"])
 def load_session(session_id):
     """Load a previous session."""
-    memory = ConversationMemory(session_id=session_id)
-
     session["session_id"] = session_id
-    session["history"] = memory.get_history()
     session.modified = True
+
+    history = load_web_session(session_id)
 
     return jsonify({
         "success": True,
         "session_id": session_id,
-        "message_count": len(session["history"])
+        "message_count": len(history)
     })
 
 

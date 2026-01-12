@@ -14,11 +14,16 @@ output/*.pptx
 output/*.docx
 output/*.pdf
 output/*.md
+output/*.json
 !output/.gitkeep
 
 # Conversation memory and learned knowledge
 conversations/
 learned_knowledge.json
+
+# Web UI session data
+web_sessions/
+.flask_secret_key
 
 # Runtime data files (created by slack_bot.py)
 feedback_log.json
