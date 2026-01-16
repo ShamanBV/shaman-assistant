@@ -8,7 +8,7 @@ import json
 import anthropic
 import config
 from models import Intent, ClassificationResult, SearchResult
-from tools import DOCUMENT_TOOLS, process_document_tool, FILE_TOOLS, process_file_tool
+from tools import DOCUMENT_TOOLS, process_document_tool, FILE_TOOLS, process_file_tool, SYNC_TOOLS, process_sync_tool
 
 
 # Expanded system prompt for Shaman Assistant
@@ -59,6 +59,15 @@ You can create professional deliverables:
 - **Markdown** (`create_markdown`): Documentation, README files, specifications, notes
 - **JSON Data** (`create_json_structure`): Structured data files based on user-provided examples or schemas
 
+### 4. Academy Content Sync
+You can sync curriculum and lesson files between local shaman-assistant and shaman-quiz-demo (source of truth):
+
+- **Check Status** (`check_academy_sync`): See which files are synced, which are newer locally or in source
+- **Pull from Source** (`sync_from_source`): Get latest curriculum.json and .md lessons from quiz-demo
+- **Push to Source** (`sync_to_source`): Push local changes to quiz-demo after editing
+
+Use these tools to keep academy content synchronized across repositories.
+
 ## Guidelines
 
 When generating documents:
@@ -81,7 +90,7 @@ When reading files:
 """
 
 
-# Tool definitions including search, file reading, and document generation
+# Tool definitions including search, file reading, document generation, and sync
 SHAMAN_TOOLS = [
     {
         "name": "search_knowledge",
@@ -96,11 +105,15 @@ SHAMAN_TOOLS = [
         }
     },
     *FILE_TOOLS,
-    *DOCUMENT_TOOLS
+    *DOCUMENT_TOOLS,
+    *SYNC_TOOLS
 ]
 
 # List of file tool names for easy checking
 FILE_TOOL_NAMES = {tool["name"] for tool in FILE_TOOLS}
+
+# List of sync tool names for easy checking
+SYNC_TOOL_NAMES = {tool["name"] for tool in SYNC_TOOLS}
 
 
 class LLMService:
@@ -382,6 +395,9 @@ Return only the summary."""
             return json.dumps(results, indent=2, default=str)
         elif tool_name in FILE_TOOL_NAMES:
             result = process_file_tool(tool_name, tool_input)
+            return json.dumps(result, indent=2, default=str)
+        elif tool_name in SYNC_TOOL_NAMES:
+            result = process_sync_tool(tool_name, tool_input)
             return json.dumps(result, indent=2, default=str)
         elif tool_name in ["create_presentation", "create_document", "create_pdf_report", "create_markdown", "create_json_structure"]:
             return process_document_tool(tool_name, tool_input)

@@ -1,7 +1,7 @@
 """
 Shaman Assistant Tools
 ======================
-Document generation, file reading, and other tool capabilities.
+Document generation, file reading, sync, and other tool capabilities.
 """
 from .document_tools import (
     # Document creation
@@ -24,6 +24,12 @@ from .document_tools import (
     read_pdf_file,
     read_docx_file,
     read_pptx_file,
+    # Academy sync
+    SYNC_TOOLS,
+    process_sync_tool,
+    check_academy_sync_status,
+    sync_from_quiz_demo,
+    sync_to_quiz_demo,
 )
 
 __all__ = [
@@ -47,4 +53,10 @@ __all__ = [
     "read_pdf_file",
     "read_docx_file",
     "read_pptx_file",
+    # Academy sync
+    "SYNC_TOOLS",
+    "process_sync_tool",
+    "check_academy_sync_status",
+    "sync_from_quiz_demo",
+    "sync_to_quiz_demo",
 ]

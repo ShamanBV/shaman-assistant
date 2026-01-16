@@ -14,6 +14,12 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 # Base directory for file reading (project root)
 PROJECT_ROOT = Path(__file__).parent.parent.resolve()
 
+# Academy content sync configuration
+# Source of truth for curriculum.json and lesson .md files
+QUIZ_DEMO_PATH = Path.home() / "PycharmProjects" / "shaman-quiz-demo"
+QUIZ_DEMO_CONTENT = QUIZ_DEMO_PATH / "src" / "content"
+LOCAL_ACADEMY_PATH = OUTPUT_DIR / "shaman-academy"
+
 # Allowed directories for file reading (security)
 ALLOWED_READ_DIRS = [
     PROJECT_ROOT / "output",
@@ -21,6 +27,7 @@ ALLOWED_READ_DIRS = [
     PROJECT_ROOT / "transcripts",
     PROJECT_ROOT / "templates",
     PROJECT_ROOT,  # Allow reading from project root for files like .md, .json, .txt
+    QUIZ_DEMO_CONTENT,  # Allow reading from quiz-demo source of truth
 ]
 
 
@@ -652,6 +659,267 @@ def list_files(directory: str = ".", pattern: str = "*") -> dict:
         return {"error": f"Failed to list directory: {str(e)}"}
 
 
+# =============================================================================
+# ACADEMY CONTENT SYNC TOOLS
+# =============================================================================
+
+def _get_file_hash(file_path: Path) -> str:
+    """Get MD5 hash of a file for comparison."""
+    import hashlib
+    return hashlib.md5(file_path.read_bytes()).hexdigest()
+
+
+def _get_file_mtime(file_path: Path) -> float:
+    """Get modification time of a file."""
+    return file_path.stat().st_mtime if file_path.exists() else 0
+
+
+def check_academy_sync_status() -> dict:
+    """
+    Check sync status between local academy files and quiz-demo source of truth.
+
+    Returns:
+        Dict with sync status for curriculum.json and all .md files
+    """
+    try:
+        if not QUIZ_DEMO_CONTENT.exists():
+            return {"error": f"Quiz-demo content directory not found: {QUIZ_DEMO_CONTENT}"}
+
+        # Ensure local directory exists
+        LOCAL_ACADEMY_PATH.mkdir(parents=True, exist_ok=True)
+
+        status = {
+            "source_path": str(QUIZ_DEMO_CONTENT),
+            "local_path": str(LOCAL_ACADEMY_PATH),
+            "curriculum": {},
+            "lessons": [],
+            "summary": {
+                "synced": 0,
+                "local_newer": 0,
+                "source_newer": 0,
+                "local_only": 0,
+                "source_only": 0
+            }
+        }
+
+        # Check curriculum.json
+        source_curriculum = QUIZ_DEMO_CONTENT / "curriculum.json"
+        local_curriculum = LOCAL_ACADEMY_PATH / "curriculum.json"
+
+        if source_curriculum.exists():
+            source_mtime = _get_file_mtime(source_curriculum)
+            local_mtime = _get_file_mtime(local_curriculum)
+
+            if not local_curriculum.exists():
+                sync_status = "source_only"
+            elif abs(source_mtime - local_mtime) < 1:  # Within 1 second
+                # Check content hash for exact match
+                if _get_file_hash(source_curriculum) == _get_file_hash(local_curriculum):
+                    sync_status = "synced"
+                elif source_mtime > local_mtime:
+                    sync_status = "source_newer"
+                else:
+                    sync_status = "local_newer"
+            elif source_mtime > local_mtime:
+                sync_status = "source_newer"
+            else:
+                sync_status = "local_newer"
+
+            status["curriculum"] = {
+                "source_modified": datetime.fromtimestamp(source_mtime).isoformat() if source_mtime else None,
+                "local_modified": datetime.fromtimestamp(local_mtime).isoformat() if local_mtime else None,
+                "status": sync_status
+            }
+            status["summary"][sync_status] += 1
+
+        # Check all .md files
+        source_md_files = set(f.name for f in QUIZ_DEMO_CONTENT.glob("*.md"))
+        local_md_files = set(f.name for f in LOCAL_ACADEMY_PATH.glob("*.md"))
+
+        all_md_files = source_md_files | local_md_files
+
+        for md_file in sorted(all_md_files):
+            source_file = QUIZ_DEMO_CONTENT / md_file
+            local_file = LOCAL_ACADEMY_PATH / md_file
+
+            source_exists = source_file.exists()
+            local_exists = local_file.exists()
+
+            if source_exists and not local_exists:
+                sync_status = "source_only"
+            elif local_exists and not source_exists:
+                sync_status = "local_only"
+            else:
+                source_mtime = _get_file_mtime(source_file)
+                local_mtime = _get_file_mtime(local_file)
+
+                if _get_file_hash(source_file) == _get_file_hash(local_file):
+                    sync_status = "synced"
+                elif source_mtime > local_mtime:
+                    sync_status = "source_newer"
+                else:
+                    sync_status = "local_newer"
+
+            status["lessons"].append({
+                "file": md_file,
+                "status": sync_status
+            })
+            status["summary"][sync_status] += 1
+
+        return status
+
+    except Exception as e:
+        return {"error": f"Failed to check sync status: {str(e)}"}
+
+
+def sync_from_quiz_demo(files: list[str] = None, force: bool = False) -> dict:
+    """
+    Pull files from quiz-demo (source of truth) to local shaman-assistant.
+
+    Args:
+        files: Specific files to sync (e.g., ["curriculum.json", "clm-intro.md"]).
+               If None, syncs all files that are newer in source.
+        force: If True, overwrite local files even if they're newer.
+
+    Returns:
+        Dict with sync results
+    """
+    try:
+        import shutil
+
+        if not QUIZ_DEMO_CONTENT.exists():
+            return {"error": f"Quiz-demo content directory not found: {QUIZ_DEMO_CONTENT}"}
+
+        LOCAL_ACADEMY_PATH.mkdir(parents=True, exist_ok=True)
+
+        results = {
+            "synced": [],
+            "skipped": [],
+            "errors": []
+        }
+
+        # Determine which files to sync
+        if files:
+            files_to_check = files
+        else:
+            # Get all content files from source
+            files_to_check = ["curriculum.json"] + [f.name for f in QUIZ_DEMO_CONTENT.glob("*.md")]
+
+        for filename in files_to_check:
+            source_file = QUIZ_DEMO_CONTENT / filename
+            local_file = LOCAL_ACADEMY_PATH / filename
+
+            if not source_file.exists():
+                results["errors"].append(f"{filename}: not found in source")
+                continue
+
+            # Check if we should sync
+            should_sync = force
+
+            if not should_sync:
+                if not local_file.exists():
+                    should_sync = True
+                elif _get_file_hash(source_file) != _get_file_hash(local_file):
+                    source_mtime = _get_file_mtime(source_file)
+                    local_mtime = _get_file_mtime(local_file)
+
+                    if source_mtime > local_mtime:
+                        should_sync = True
+                    else:
+                        results["skipped"].append(f"{filename}: local is newer (use force=True to overwrite)")
+                        continue
+                else:
+                    results["skipped"].append(f"{filename}: already synced")
+                    continue
+
+            if should_sync:
+                shutil.copy2(source_file, local_file)
+                results["synced"].append(filename)
+
+        results["summary"] = f"Synced {len(results['synced'])} files, skipped {len(results['skipped'])}, errors {len(results['errors'])}"
+
+        return results
+
+    except Exception as e:
+        return {"error": f"Failed to sync from quiz-demo: {str(e)}"}
+
+
+def sync_to_quiz_demo(files: list[str] = None, force: bool = False) -> dict:
+    """
+    Push local files to quiz-demo (source of truth).
+
+    Args:
+        files: Specific files to sync (e.g., ["curriculum.json", "clm-intro.md"]).
+               If None, syncs all files that are newer locally.
+        force: If True, overwrite source files even if they're newer.
+
+    Returns:
+        Dict with sync results
+    """
+    try:
+        import shutil
+
+        if not QUIZ_DEMO_CONTENT.exists():
+            return {"error": f"Quiz-demo content directory not found: {QUIZ_DEMO_CONTENT}"}
+
+        if not LOCAL_ACADEMY_PATH.exists():
+            return {"error": f"Local academy directory not found: {LOCAL_ACADEMY_PATH}"}
+
+        results = {
+            "synced": [],
+            "skipped": [],
+            "errors": []
+        }
+
+        # Determine which files to sync
+        if files:
+            files_to_check = files
+        else:
+            # Get all content files from local
+            files_to_check = []
+            if (LOCAL_ACADEMY_PATH / "curriculum.json").exists():
+                files_to_check.append("curriculum.json")
+            files_to_check.extend([f.name for f in LOCAL_ACADEMY_PATH.glob("*.md")])
+
+        for filename in files_to_check:
+            local_file = LOCAL_ACADEMY_PATH / filename
+            source_file = QUIZ_DEMO_CONTENT / filename
+
+            if not local_file.exists():
+                results["errors"].append(f"{filename}: not found locally")
+                continue
+
+            # Check if we should sync
+            should_sync = force
+
+            if not should_sync:
+                if not source_file.exists():
+                    should_sync = True
+                elif _get_file_hash(source_file) != _get_file_hash(local_file):
+                    source_mtime = _get_file_mtime(source_file)
+                    local_mtime = _get_file_mtime(local_file)
+
+                    if local_mtime > source_mtime:
+                        should_sync = True
+                    else:
+                        results["skipped"].append(f"{filename}: source is newer (use force=True to overwrite)")
+                        continue
+                else:
+                    results["skipped"].append(f"{filename}: already synced")
+                    continue
+
+            if should_sync:
+                shutil.copy2(local_file, source_file)
+                results["synced"].append(filename)
+
+        results["summary"] = f"Synced {len(results['synced'])} files to quiz-demo, skipped {len(results['skipped'])}, errors {len(results['errors'])}"
+
+        return results
+
+    except Exception as e:
+        return {"error": f"Failed to sync to quiz-demo: {str(e)}"}
+
+
 # Tool definitions for Claude API
 DOCUMENT_TOOLS = [
     {
@@ -889,6 +1157,55 @@ FILE_TOOLS = [
 ]
 
 
+# Sync tool definitions for Claude API
+SYNC_TOOLS = [
+    {
+        "name": "check_academy_sync",
+        "description": "Check sync status between local academy files and the quiz-demo source of truth. Shows which files are synced, which are newer locally, and which are newer in source.",
+        "input_schema": {
+            "type": "object",
+            "properties": {}
+        }
+    },
+    {
+        "name": "sync_from_source",
+        "description": "Pull academy content (curriculum.json and lesson .md files) from quiz-demo (source of truth) to local shaman-assistant. Use this to get the latest content.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "files": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "description": "Specific files to sync (e.g., ['curriculum.json', 'clm-intro.md']). If not provided, syncs all files that are newer in source."
+                },
+                "force": {
+                    "type": "boolean",
+                    "description": "If true, overwrite local files even if they're newer. Default: false"
+                }
+            }
+        }
+    },
+    {
+        "name": "sync_to_source",
+        "description": "Push local academy content to quiz-demo (source of truth). Use this after editing files locally to update the main repository.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "files": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "description": "Specific files to sync (e.g., ['curriculum.json', 'clm-intro.md']). If not provided, syncs all files that are newer locally."
+                },
+                "force": {
+                    "type": "boolean",
+                    "description": "If true, overwrite source files even if they're newer. Default: false"
+                }
+            }
+        }
+    }
+]
+
+
 def process_document_tool(tool_name: str, tool_input: dict) -> str:
     """
     Process a document generation tool call.
@@ -962,3 +1279,33 @@ def process_file_tool(tool_name: str, tool_input: dict) -> dict:
             return {"error": f"Unknown file tool: {tool_name}"}
     except Exception as e:
         return {"error": f"Error reading file: {str(e)}"}
+
+
+def process_sync_tool(tool_name: str, tool_input: dict) -> dict:
+    """
+    Process an academy sync tool call.
+
+    Args:
+        tool_name: Name of the tool to execute
+        tool_input: Tool input parameters
+
+    Returns:
+        Dict with sync results or error
+    """
+    try:
+        if tool_name == "check_academy_sync":
+            return check_academy_sync_status()
+        elif tool_name == "sync_from_source":
+            return sync_from_quiz_demo(
+                files=tool_input.get("files"),
+                force=tool_input.get("force", False)
+            )
+        elif tool_name == "sync_to_source":
+            return sync_to_quiz_demo(
+                files=tool_input.get("files"),
+                force=tool_input.get("force", False)
+            )
+        else:
+            return {"error": f"Unknown sync tool: {tool_name}"}
+    except Exception as e:
+        return {"error": f"Error in sync operation: {str(e)}"}
