@@ -8,7 +8,7 @@ import json
 import anthropic
 import config
 from models import Intent, ClassificationResult, SearchResult
-from tools import DOCUMENT_TOOLS, process_document_tool
+from tools import DOCUMENT_TOOLS, process_document_tool, FILE_TOOLS, process_file_tool
 
 
 # Expanded system prompt for Shaman Assistant
@@ -35,7 +35,22 @@ Use `search_knowledge` to find information about:
 
 **Always search first** when answering questions about Shaman or pharma marketing.
 
-### 2. Document Generation
+### 2. File Reading
+You can read and explore files in the project directory:
+
+- **List Files** (`list_files`): Browse directories, find files with patterns (e.g., "*.json", "*.pdf")
+- **Text Files** (`read_text_file`): Read .txt, .md, .log, .py, .html and other text files
+- **JSON Files** (`read_json_file`): Read and parse JSON data files
+- **CSV Files** (`read_csv_file`): Read spreadsheet data from CSV files
+- **Excel Files** (`read_excel_file`): Read .xlsx spreadsheets with multiple sheets
+- **PDF Files** (`read_pdf_file`): Extract text from PDF documents
+- **Word Documents** (`read_word_document`): Read .docx files with paragraphs and tables
+- **PowerPoint** (`read_powerpoint`): Extract content from .pptx presentations
+
+Use these tools to explore generated files, review documents, or access project data.
+File paths can be relative to the project root (e.g., "output/shaman-academy/curriculum.json").
+
+### 3. Document Generation
 You can create professional deliverables:
 
 - **Presentations** (`create_presentation`): Customer onboarding decks, training materials, sales enablement
@@ -53,6 +68,11 @@ When generating documents:
 4. Add speaker notes for presentations
 5. Keep content concise and actionable
 
+When reading files:
+1. Use `list_files` first if you're not sure what files exist
+2. Use the appropriate reader for each file type
+3. Summarize large files rather than showing all content
+
 ## Response Style
 - Be concise and direct
 - Confirm what you're creating before generating files
@@ -61,7 +81,7 @@ When generating documents:
 """
 
 
-# Tool definitions including search and document generation
+# Tool definitions including search, file reading, and document generation
 SHAMAN_TOOLS = [
     {
         "name": "search_knowledge",
@@ -75,8 +95,12 @@ SHAMAN_TOOLS = [
             "required": ["query"]
         }
     },
+    *FILE_TOOLS,
     *DOCUMENT_TOOLS
 ]
+
+# List of file tool names for easy checking
+FILE_TOOL_NAMES = {tool["name"] for tool in FILE_TOOLS}
 
 
 class LLMService:
@@ -356,6 +380,9 @@ Return only the summary."""
                 return json.dumps({"error": "Search function not available"})
             results = search_fn(tool_input["query"], tool_input.get("n_results", 5))
             return json.dumps(results, indent=2, default=str)
+        elif tool_name in FILE_TOOL_NAMES:
+            result = process_file_tool(tool_name, tool_input)
+            return json.dumps(result, indent=2, default=str)
         elif tool_name in ["create_presentation", "create_document", "create_pdf_report", "create_markdown", "create_json_structure"]:
             return process_document_tool(tool_name, tool_input)
         else:

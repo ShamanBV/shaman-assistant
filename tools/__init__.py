@@ -1,22 +1,50 @@
 """
 Shaman Assistant Tools
 ======================
-Document generation and other tool capabilities.
+Document generation, file reading, and other tool capabilities.
 """
 from .document_tools import (
+    # Document creation
     create_pptx,
     create_docx,
     create_pdf,
+    create_markdown,
+    create_json,
     DOCUMENT_TOOLS,
     process_document_tool,
-    OUTPUT_DIR
+    OUTPUT_DIR,
+    # File reading
+    FILE_TOOLS,
+    process_file_tool,
+    list_files,
+    read_text_file,
+    read_json_file,
+    read_csv_file,
+    read_excel_file,
+    read_pdf_file,
+    read_docx_file,
+    read_pptx_file,
 )
 
 __all__ = [
+    # Document creation
     "create_pptx",
     "create_docx",
     "create_pdf",
+    "create_markdown",
+    "create_json",
     "DOCUMENT_TOOLS",
     "process_document_tool",
-    "OUTPUT_DIR"
+    "OUTPUT_DIR",
+    # File reading
+    "FILE_TOOLS",
+    "process_file_tool",
+    "list_files",
+    "read_text_file",
+    "read_json_file",
+    "read_csv_file",
+    "read_excel_file",
+    "read_pdf_file",
+    "read_docx_file",
+    "read_pptx_file",
 ]
